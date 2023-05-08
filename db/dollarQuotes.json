@@ -1,6 +1,6 @@
 {
   "latest": {
-    "date": "08-05-2023 01:04:57",
+    "date": "05-05-2023 16:00:00",
     "results": {
       "dolarBlue": [
         {
@@ -27,34 +27,5 @@
       ]
     }
   },
-  "history": [
-    {
-      "date": "05-05-2023 16:00:00",
-      "results": {
-        "dolarBlue": [
-          {
-            "compra": "$464.00",
-            "venta": "$469.00"
-          }
-        ],
-        "dolarOficial": [
-          {
-            "compra": "$226.27",
-            "venta": "$233.67"
-          }
-        ],
-        "contadoConLiqui": [
-          {
-            "compra": "$435.20",
-            "venta": "$440.53"
-          }
-        ],
-        "dolarSolidario": [
-          {
-            "venta": "$386.10"
-          }
-        ]
-      }
-    }
-  ]
+  "history": []
 }
