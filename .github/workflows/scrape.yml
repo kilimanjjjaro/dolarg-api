@@ -27,6 +27,7 @@ jobs:
               args: [--fix-lockfile]
       - run: |
           npm run scrape
+          git config user.name "kili-bot"
           git add .
-          git commit -m "[kilibot] update database"
+          git commit -m "[kili-bot] update database"
           git push
