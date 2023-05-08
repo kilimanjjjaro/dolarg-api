@@ -7,11 +7,19 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
+    timeout-minutes: 5
+    name: Deploy API to Cloudflare Workers
+    if: github.repository_owner == 'kilimanjjjaro'
+    environment: Production
     steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 19.9.0
       - uses: pnpm/action-setup@v2
         with:
           version: 8.4.0
+          run_install: true
       - uses: cloudflare/wrangler-action@2.0.0
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
