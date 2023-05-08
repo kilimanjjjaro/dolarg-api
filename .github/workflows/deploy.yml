@@ -6,7 +6,6 @@ on:
 
 jobs:
   deploy:
-    needs: test
     runs-on: ubuntu-22.04
     timeout-minutes: 5
     name: Deploy API to Cloudflare Workers
