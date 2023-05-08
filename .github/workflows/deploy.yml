@@ -5,20 +5,25 @@ on:
     branches: [main]
 
 jobs:
-  test:
-    runs-on: ubuntu-22.04
-    name: Testing
-    if: github.ref_name == 'main'
-    timeout-minutes: 5
+  cache-and-install:
+    runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 19
+
       - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        id: pnpm-install
         with:
-          version: 7.18.2
+          version: 8
           run_install: false
+
       - name: Get pnpm store directory
         id: pnpm-cache
         shell: bash
@@ -38,22 +43,11 @@ jobs:
 
   deploy:
     needs: test
-    runs-on: ubuntu-22.04
-    timeout-minutes: 5
-    name: Deploy API
-    if: github.repository_owner == 'kilimanjjjaro'
-    environment: Production
+    runs-on: ubuntu-latest
+    name: Deploy
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 7.18.2
-          run_install: true
-      - uses: cloudflare/wrangler-action@2.0.0
+      - uses: actions/checkout@v2
+      - name: Publish
+        uses: cloudflare/wrangler-action@2.0.0
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
-          workingDirectory: api
-          command: publish --env production
