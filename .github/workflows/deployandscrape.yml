@@ -36,7 +36,7 @@ jobs:
 
   deploy:
     name: Deploy to Cloudflare Workers
-    needs: build
+    needs: scrape
     runs-on: ubuntu-22.04
     if: github.repository_owner == 'kilimanjjjaro'
     steps:
