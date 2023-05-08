@@ -1,13 +1,13 @@
-name: Deploy
+name: Deploy to Cloudflare Workers
 
 on:
   push:
     branches: [main]
 
 jobs:
-  cache-and-install:
+  install-dependencies:
     runs-on: ubuntu-latest
-
+    name: Install dependencies
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -15,13 +15,13 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 19
+          node-version: 19.9.0
 
       - uses: pnpm/action-setup@v2
         name: Install pnpm
         id: pnpm-install
         with:
-          version: 8
+          version: 8.4.0
           run_install: false
 
       - name: Get pnpm store directory
@@ -41,10 +41,10 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-  deploy:
+  install-dependencies:
     needs: cache-and-install
     runs-on: ubuntu-latest
-    name: Deploy
+    name: Deploy to Cloudflare Workers
     steps:
       - uses: actions/checkout@v2
       - name: Publish
