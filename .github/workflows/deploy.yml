@@ -1,4 +1,4 @@
-name: Deploy API
+name: Deploy to Cloudflare Workers
 
 on:
   push:
@@ -6,19 +6,26 @@ on:
 
 jobs:
   install-dependencies:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     name: Install dependencies
     if: github.ref_name == 'main'
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: 19
+
       - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        id: pnpm-install
         with:
           version: 8
           run_install: false
+
       - name: Get pnpm store directory
         id: pnpm-cache
         shell: bash
@@ -34,25 +41,18 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --no-frozen-lockfile
 
   deploy:
     needs: install-dependencies
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     timeout-minutes: 5
-    name: Deploy API to Cloudflare Workers
+    name: Deploy to Cloudflare Workers
     if: github.repository_owner == 'kilimanjjjaro'
     environment: Production
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 19
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8
-          run_install: true
-      - uses: cloudflare/wrangler-action@2.0.0
+      - uses: actions/checkout@v2
+      - name: Publish
+        uses: cloudflare/wrangler-action@2.0.0
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
-          command: publish --env production
