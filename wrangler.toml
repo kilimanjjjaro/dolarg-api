@@ -1,3 +1,5 @@
 name = "dolarg-api"
 main = "api/index.ts"
 compatibility_date = "2023-05-07"
+
+[env.production]
