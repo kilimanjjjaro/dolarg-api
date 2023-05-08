@@ -1,4 +1,4 @@
-name: Scrape Dolar Hoy Website and Deploy to Cloudflare Workers
+name: Scrape and Deploy to Cloudflare Workers
 
 on:
   workflow_dispatch:
