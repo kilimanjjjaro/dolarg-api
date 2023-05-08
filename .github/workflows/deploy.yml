@@ -41,14 +41,14 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile
+        run: pnpm install
 
   deploy:
     needs: install-dependencies
     runs-on: ubuntu-latest
     timeout-minutes: 5
     name: Deploy to Cloudflare Workers
-    if: github.repository_owner == 'midudev'
+    if: github.repository_owner == 'kilimanjjjaro'
     environment: Production
     steps:
       - uses: actions/checkout@v2
