@@ -2,16 +2,14 @@ name: Scrape Dolar Hoy Website
 
 on:
   workflow_dispatch:
-
   repository_dispatch:
     types:
       - webhook
-
   schedule:
     - cron: '0 19 * * 1-5'
 
 jobs:
-  build:
+  scrape:
     runs-on: ubuntu-22.04
     steps:
       - uses: zcong1993/setup-timezone@master
@@ -29,6 +27,8 @@ jobs:
               args: [--fix-lockfile]
       - run: |
           npm run scrape
-          git config user.name "kilimanjjjaro"
-          git commit -am "[bot] update Dolar API database"
+          git config --local user.email "hola@kilimanjjjaro.com"
+          git config --local user.name "kilimanjjjaro"
+          git add .
+          git commit -m "[kilibot] update Dolar API database"
           git push
