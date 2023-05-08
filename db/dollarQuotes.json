@@ -1,6 +1,6 @@
 {
   "latest": {
-    "date": "05-05-2023 16:00:00",
+    "date": "08-05-2023 13:04:13",
     "results": {
       "dolarBlue": [
         {
@@ -10,22 +10,51 @@
       ],
       "dolarOficial": [
         {
-          "compra": "$226.27",
-          "venta": "$233.67"
+          "compra": "$227.45",
+          "venta": "$234.96"
         }
       ],
       "contadoConLiqui": [
         {
-          "compra": "$435.20",
-          "venta": "$440.53"
+          "compra": "$434.10",
+          "venta": "$438.82"
         }
       ],
       "dolarSolidario": [
         {
-          "venta": "$386.10"
+          "venta": "$387.75"
         }
       ]
     }
   },
-  "history": []
+  "history": [
+    {
+      "date": "05-05-2023 16:00:00",
+      "results": {
+        "dolarBlue": [
+          {
+            "compra": "$464.00",
+            "venta": "$469.00"
+          }
+        ],
+        "dolarOficial": [
+          {
+            "compra": "$226.27",
+            "venta": "$233.67"
+          }
+        ],
+        "contadoConLiqui": [
+          {
+            "compra": "$435.20",
+            "venta": "$440.53"
+          }
+        ],
+        "dolarSolidario": [
+          {
+            "venta": "$386.10"
+          }
+        ]
+      }
+    }
+  ]
 }
