@@ -22,10 +22,10 @@ export async function writeDBFile (data: any) {
 }
 
 export const updateDollarQuotes = ({ newDollarQuotes, currentDollarQuotes }: Props) => {
-  if (currentDollarQuotes === null && newDollarQuotes !== null) return { latest: newDollarQuotes, history: [] }
+  if (currentDollarQuotes === null && newDollarQuotes !== null) return { latest: newDollarQuotes, historical: [] }
 
   const latest = { ...currentDollarQuotes.latest }
-  currentDollarQuotes.history.unshift({ ...latest })
+  currentDollarQuotes.historical.unshift({ ...latest })
   currentDollarQuotes.latest = newDollarQuotes
 
   return currentDollarQuotes

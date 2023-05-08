@@ -23,5 +23,5 @@ export interface newDollarQuotesInterface {
 
 export interface currentDollarQuotesInterface {
   latest: newDollarQuotesInterface
-  history: newDollarQuotesInterface[]
+  historical: newDollarQuotesInterface[]
 }
