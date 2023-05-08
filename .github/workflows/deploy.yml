@@ -1,11 +1,14 @@
 name: Deploy API to Cloudflare Workers
 
-on: push
+on:
+  push:
+    branches: [main]
 
 jobs:
   deploy:
     runs-on: ubuntu-22.04
     timeout-minutes: 5
+    if: github.repository_owner == 'kilimanjjjaro' && github.event_name == 'push' && github.ref_name == 'main'
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
