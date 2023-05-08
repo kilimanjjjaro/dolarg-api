@@ -31,4 +31,4 @@ jobs:
           npm run scrape
           git config user.name "kilimanjjjaro"
           git commit -am "[bot] update Dolar API database"
-          git push origin main
+          git push
