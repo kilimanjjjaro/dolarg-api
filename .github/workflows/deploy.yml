@@ -41,8 +41,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-  install-dependencies:
-    needs: cache-and-install
+  deploy:
+    needs: install-dependencies
     runs-on: ubuntu-latest
     name: Deploy to Cloudflare Workers
     steps:
