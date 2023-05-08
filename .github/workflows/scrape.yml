@@ -27,8 +27,6 @@ jobs:
               args: [--fix-lockfile]
       - run: |
           npm run scrape
-          git config --local user.email "hola@kilimanjjjaro.com"
-          git config --local user.name "kilimanjjjaro"
           git add .
           git commit -m "[kilibot] update database"
           git push
