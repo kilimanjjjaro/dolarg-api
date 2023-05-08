@@ -8,6 +8,8 @@ jobs:
   install-dependencies:
     runs-on: ubuntu-latest
     name: Install dependencies
+    if: github.ref_name == 'main'
+    timeout-minutes: 5
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -39,12 +41,15 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
   deploy:
     needs: install-dependencies
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     name: Deploy to Cloudflare Workers
+    if: github.repository_owner == 'midudev'
+    environment: Production
     steps:
       - uses: actions/checkout@v2
       - name: Publish
