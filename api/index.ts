@@ -12,7 +12,7 @@ app.use(
   })
 )
 
-app.get('/api', (ctx) => {
+app.get('/', (ctx) => {
   return ctx.json(data)
 })
 
