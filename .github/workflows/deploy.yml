@@ -19,7 +19,8 @@ jobs:
         with:
           version: 8.4.0
           run_install:
-            - args: [--no-frozen-lockfile]
+            - recursive: true
+              args: [--no-frozen-lockfile]
       - uses: cloudflare/wrangler-action@2.0.0
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
