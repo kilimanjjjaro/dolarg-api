@@ -18,8 +18,7 @@ jobs:
       - uses: pnpm/action-setup@v2
         with:
           version: 8.4.0
-          run_install: |
-            - args: [--fix-lockfile]
+          run_install: true
       - uses: cloudflare/wrangler-action@2.0.0
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
