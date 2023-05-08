@@ -1,0 +1,56 @@
+name: Scrape Dolar Hoy Website and Deploy to Cloudflare Workers
+
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types:
+      - webhook
+  schedule:
+    - cron: '0 19 * * 1-5'
+
+jobs:
+  scrape:
+    name: Scrape Dolar Hoy Website
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: zcong1993/setup-timezone@master
+        with:
+          timezone: America/Argentina/Buenos_Aires
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 19.9.0
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8.4.0
+          run_install: |
+            - recursive: true
+              args: [--fix-lockfile]
+      - run: |
+          npm run scrape
+          git config --local user.email "hola@kilimanjjjaro.com"
+          git config --local user.name "kilimanjjjaro"
+          git add .
+          git commit -m "[kilibot] update Dolar API database"
+          git push
+
+  deploy:
+    name: Deploy to Cloudflare Workers
+    needs: build
+    runs-on: ubuntu-22.04
+    if: github.repository_owner == 'kilimanjjjaro'
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 19.9.0
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8.4.0
+          run_install: |
+            - recursive: true
+              args: [--fix-lockfile]
+      - uses: cloudflare/wrangler-action@2.0.0
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          command: publish
