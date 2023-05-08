@@ -1,32 +1,32 @@
 import { readFile, writeFile } from 'node:fs/promises'
 import { DB_PATH } from '../constants'
-import { type CurrentExchangeRatesInterface, type NewExchangeRatesInterface } from '../interfaces'
+import { type currentDollarQuotesInterface, type newDollarQuotesInterface } from '../interfaces'
 
 interface Props {
-  newExchangeRates: NewExchangeRatesInterface
-  currentExchangeRates: CurrentExchangeRatesInterface
+  newDollarQuotes: newDollarQuotesInterface
+  currentDollarQuotes: currentDollarQuotesInterface
 }
 
 export async function readDBFile () {
-  const data = await readFile(`${DB_PATH}/exchangeRates.json`, 'utf-8')
+  const data = await readFile(`${DB_PATH}/dollarQuotes.json`, 'utf-8')
 
   return data !== '' ? JSON.parse(data) : null
 }
 
 export async function writeDBFile (data: any) {
   await writeFile(
-    `${DB_PATH}/exchangeRates.json`,
+    `${DB_PATH}/dollarQuotes.json`,
     JSON.stringify(data, null, 2),
     'utf-8'
   )
 }
 
-export const updateExchangeRates = ({ newExchangeRates, currentExchangeRates }: Props) => {
-  if (currentExchangeRates === null && newExchangeRates !== null) return { latest: newExchangeRates, history: [] }
+export const updateDollarQuotes = ({ newDollarQuotes, currentDollarQuotes }: Props) => {
+  if (currentDollarQuotes === null && newDollarQuotes !== null) return { latest: newDollarQuotes, history: [] }
 
-  const latest = { ...currentExchangeRates.latest }
-  currentExchangeRates.history.unshift({ ...latest })
-  currentExchangeRates.latest = newExchangeRates
+  const latest = { ...currentDollarQuotes.latest }
+  currentDollarQuotes.history.unshift({ ...latest })
+  currentDollarQuotes.latest = newDollarQuotes
 
-  return currentExchangeRates
+  return currentDollarQuotes
 }

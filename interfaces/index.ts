@@ -1,4 +1,4 @@
-export interface ExchangeRatesInterface {
+export interface dollarQuotesInterface {
   dolarBlue: {
     compra: string
     venta: string
@@ -16,12 +16,12 @@ export interface ExchangeRatesInterface {
   }
 }
 
-export interface NewExchangeRatesInterface {
+export interface newDollarQuotesInterface {
   date: string
-  results: ExchangeRatesInterface
+  results: dollarQuotesInterface
 }
 
-export interface CurrentExchangeRatesInterface {
-  latest: NewExchangeRatesInterface
-  history: NewExchangeRatesInterface[]
+export interface currentDollarQuotesInterface {
+  latest: newDollarQuotesInterface
+  history: newDollarQuotesInterface[]
 }

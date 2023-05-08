@@ -1,27 +1,26 @@
 import dayjs from 'dayjs'
 import { scraper, logError, logInfo, logSuccess } from '../utils/scraper'
-import { readDBFile, writeDBFile, updateExchangeRates } from '../utils/database'
+import { readDBFile, writeDBFile, updateDollarQuotes } from '../utils/database'
 
 async function scrapeAndSave () {
   const start = performance.now()
 
   try {
     logInfo('Scraping started')
-    const ExchangeRates = await scraper()
+    const dollarQuotes = await scraper()
     logSuccess('Scraping finished')
 
     logInfo('Saving to database started')
-    const newExchangeRates = {
+    const newDollarQuotes = {
       date: dayjs().format('DD-MM-YYYY HH:mm:ss'),
-      results: ExchangeRates
+      results: dollarQuotes
     }
 
-    const currentExchangeRates = await readDBFile()
+    const currentDollarQuotes = await readDBFile()
 
-    const updatedExchangeRates = updateExchangeRates({ newExchangeRates, currentExchangeRates })
+    const updatedDollarQuotes = updateDollarQuotes({ newDollarQuotes, currentDollarQuotes })
 
-    await writeDBFile(updatedExchangeRates)
-
+    await writeDBFile(updatedDollarQuotes)
     logSuccess('Saving to database finished')
   } catch (error) {
     logError('Scraping failed')
