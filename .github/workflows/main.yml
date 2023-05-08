@@ -1,0 +1,33 @@
+name: Scrape Dolar Hoy Website
+
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types:
+      - webhook
+  schedule:
+    - cron: '0 19 * * 1-5'
+
+jobs:
+  scrape:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: zcong1993/setup-timezone@master
+        with:
+          timezone: America/Argentina/Buenos_Aires
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 19.9.0
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8.4.0
+          run_install: |
+            - recursive: true
+              args: [--fix-lockfile]
+      - run: |
+          npm run scrape
+          git config user.name "kili-bot"
+          git add .
+          git commit -m "[kili-bot] update database"
+          git push
