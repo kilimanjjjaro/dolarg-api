@@ -31,4 +31,4 @@ jobs:
           git config --local user.name "kili-bot"
           git add .
           git commit -m "[kili-bot] update database"
-          git push
+          git push origin main
