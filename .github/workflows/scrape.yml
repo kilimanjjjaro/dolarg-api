@@ -1,4 +1,4 @@
-name: Scrape and update database
+name: Scrape data
 
 on:
   workflow_dispatch:
