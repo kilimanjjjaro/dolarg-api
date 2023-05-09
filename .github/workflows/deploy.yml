@@ -4,11 +4,14 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'db/dollarQuotes.json'
 
 jobs:
   deploy:
     name: Deploy to Cloudflare Workers
     runs-on: ubuntu-22.04
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -20,6 +23,7 @@ jobs:
           run_install: |
             - recursive: true
               args: [--fix-lockfile]
+        working-directory: ./db
       - uses: cloudflare/wrangler-action@2.0.0
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
