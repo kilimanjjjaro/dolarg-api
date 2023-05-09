@@ -12,22 +12,28 @@ jobs:
   scrape:
     runs-on: ubuntu-22.04
     steps:
-      - uses: zcong1993/setup-timezone@master
+      - name: Setup timezone
+        uses: zcong1993/setup-timezone@master
         with:
           timezone: America/Argentina/Buenos_Aires
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
         with:
           token: ${{ secrets.PAT_TOKEN }}
-      - uses: actions/setup-node@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: 19.9.0
-      - uses: pnpm/action-setup@v2
+      - name: Install dependencies
+        uses: pnpm/action-setup@v2
         with:
           version: 8.4.0
           run_install: true
-      - run: |
+      - name: Run scrape and push changes
+        run: |
           npm run scrape
-          git config --global user.name "kili-bot"
+          git config --local user.email "hola@kilimanjjjaro.com"
+          git config --local user.name "kili-bot"
           git add .
           git commit -m "[kili-bot] Update database"
           git push origin main

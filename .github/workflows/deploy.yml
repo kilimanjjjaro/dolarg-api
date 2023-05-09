@@ -13,17 +13,19 @@ jobs:
     if: github.ref_name == 'main' && github.repository_owner == 'kilimanjjjaro'
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: 19.9.0
-      - uses: pnpm/action-setup@v2
+      - name: Install dependencies
+        uses: pnpm/action-setup@v2
         with:
           version: 8.4.0
-          run_install: |
-            - recursive: true
-              args: [--fix-lockfile]
-      - uses: cloudflare/wrangler-action@2.0.0
+          run_install: true
+      - name: Deploy API to Cloudflare
+        uses: cloudflare/wrangler-action@2.0.0
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           command: publish
