@@ -1,4 +1,4 @@
-name: Deploy API to Cloudflare Workers
+name: Deploy API
 
 on:
   push:
@@ -9,7 +9,6 @@ on:
 
 jobs:
   deploy:
-    name: Deploy to Cloudflare Workers
     runs-on: ubuntu-22.04
     if: github.ref_name == 'main' && github.repository_owner == 'kilimanjjjaro'
     timeout-minutes: 5
