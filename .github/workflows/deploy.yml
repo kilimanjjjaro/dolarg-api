@@ -23,7 +23,6 @@ jobs:
           run_install: |
             - recursive: true
               args: [--fix-lockfile]
-        working-directory: ./db
       - uses: cloudflare/wrangler-action@2.0.0
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
