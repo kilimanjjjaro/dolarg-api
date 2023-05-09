@@ -1,6 +1,9 @@
 import { readFile, writeFile } from 'node:fs/promises'
 import { DB_PATH } from '../constants'
-import { type currentDollarQuotesInterface, type newDollarQuotesInterface } from '../interfaces'
+import {
+  type currentDollarQuotesInterface,
+  type newDollarQuotesInterface
+} from '../interfaces'
 
 export async function readDBFile () {
   const data = await readFile(`${DB_PATH}/dollarQuotes.json`, 'utf-8')
@@ -16,8 +19,14 @@ export async function writeDBFile (data: any) {
   )
 }
 
-export const updateDollarQuotes = ({ newDollarQuotes, currentDollarQuotes }: { newDollarQuotes: newDollarQuotesInterface, currentDollarQuotes: currentDollarQuotesInterface }) => {
-  if (currentDollarQuotes === null && newDollarQuotes !== null) return { latest: newDollarQuotes, historical: [] }
+export const updateDollarQuotes = ({
+  newDollarQuotes,
+  currentDollarQuotes
+}: {
+  newDollarQuotes: newDollarQuotesInterface
+  currentDollarQuotes: currentDollarQuotesInterface
+}) => {
+  if (currentDollarQuotes === null && newDollarQuotes !== null) { return { latest: newDollarQuotes, historical: [] } }
 
   const latest = { ...currentDollarQuotes.latest }
   currentDollarQuotes.historical.unshift({ ...latest })
