@@ -3,35 +3,54 @@ import pc from 'picocolors'
 import { type dollarQuotesInterface } from '../interfaces'
 
 export const scraper = async () => {
-  const { data } = await scrapeIt<dollarQuotesInterface>('https://dolarhoy.com', {
-    dolarBlue: {
-      listItem: '.is-7 .tile.is-child:nth-child(1) .values',
-      data: {
-        compra: '.compra .val',
-        venta: '.venta .val'
-      }
-    },
+  const { data } = await scrapeIt<dollarQuotesInterface>('https://www.lanacion.com.ar/dolar-oficial-historico/', {
     dolarOficial: {
-      listItem: '.is-7 .tile.is-child:nth-child(2) .values',
+      selector: '.dolar-subgroup li:nth-child(1) .currency-data .com-text',
       data: {
-        compra: '.compra .val',
-        venta: '.venta .val'
+        compra: 'strong:nth-of-type(1)',
+        venta: 'strong:nth-of-type(2)'
       }
     },
-    contadoConLiqui: {
-      listItem: '.is-7 .tile.is-child:nth-child(4) .values',
+    dolarBlue: {
+      selector: '.dolar-subgroup li:nth-child(2) .currency-data .com-text',
       data: {
-        compra: '.compra .val',
-        venta: '.venta .val'
+        compra: 'strong:nth-of-type(1)',
+        venta: 'strong:nth-of-type(2)'
       }
     },
-    dolarSolidario: {
-      listItem: '.is-7 .tile.is-child:nth-child(6) .values',
+    dolarTarjeta: {
+      selector: '.dolar-subgroup li:nth-child(3) .currency-data .com-text',
       data: {
-        venta: '.venta .val'
+        venta: 'strong'
+      }
+    },
+    dolarTurista: {
+      selector: '.dolar-subgroup li:nth-child(4) .currency-data .com-text',
+      data: {
+        venta: 'strong'
+      }
+    },
+    dolarMEP: {
+      selector: '.dolar-subgroup li:nth-child(5) .currency-data .com-text',
+      data: {
+        venta: 'strong'
+      }
+    },
+    dolarCCL: {
+      selector: '.dolar-subgroup li:nth-child(6) .currency-data .com-text',
+      data: {
+        venta: 'strong'
+      }
+    },
+    dolarMayorista: {
+      selector: '.dolar-subgroup li:nth-child(7) .currency-data .com-text',
+      data: {
+        venta: 'strong'
       }
     }
   })
+
+  console.log(data)
 
   return data
 }

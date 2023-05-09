@@ -1,17 +1,25 @@
 export interface dollarQuotesInterface {
-  dolarBlue: {
-    compra: string
-    venta: string
-  }
   dolarOficial: {
     compra: string
     venta: string
   }
-  contadoConLiqui: {
+  dolarBlue: {
     compra: string
     venta: string
   }
-  dolarSolidario: {
+  dolarTarjeta: {
+    venta: string
+  }
+  dolarTurista: {
+    venta: string
+  }
+  dolarMEP: {
+    venta: string
+  }
+  dolarCCL: {
+    venta: string
+  }
+  dolarMayorista: {
     venta: string
   }
 }
