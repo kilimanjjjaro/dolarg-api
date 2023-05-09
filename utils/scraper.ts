@@ -53,8 +53,6 @@ export const scraper = async () => {
     }
   )
 
-  console.log(data)
-
   return data
 }
 
