@@ -53,6 +53,21 @@ export const scraper = async () => {
     }
   )
 
+  const removeCents = (value: string): string => {
+    if (typeof value === 'string' && value.endsWith(',00')) {
+      return value.slice(0, -3)
+    }
+    return value
+  }
+
+  Object.values(data).forEach((currency) => {
+    Object.entries(currency).forEach(([key, value]) => {
+      if (value !== '') {
+        currency[key] = removeCents(value as string)
+      }
+    })
+  })
+
   return data
 }
 
