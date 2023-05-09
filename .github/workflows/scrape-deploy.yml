@@ -1,12 +1,13 @@
-name: Scrape Dolar Hoy Website
+name: Scrape and Deploy
 
 on:
-  workflow_dispatch:
-  repository_dispatch:
-    types:
-      - webhook
   schedule:
     - cron: '0 19 * * 1-5'
+  push:
+    branches:
+      - main
+    paths:
+      - 'db/dollarQuotes.json'
 
 jobs:
   scrape:
@@ -15,8 +16,8 @@ jobs:
       - uses: zcong1993/setup-timezone@master
         with:
           timezone: America/Argentina/Buenos_Aires
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
         with:
           node-version: 19.9.0
       - uses: pnpm/action-setup@v2
@@ -32,8 +33,20 @@ jobs:
           git add .
           git commit -m "[kili-bot] update database"
           git push origin main
-      - name: Deploy to Cloudflare Workers
-        if: github.ref == 'refs/heads/main'
+  deploy:
+    needs: scrape
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 19.9.0
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8.4.0
+          run_install: |
+            - recursive: true
+              args: [--fix-lockfile]
       - uses: cloudflare/wrangler-action@2.0.0
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
