@@ -10,6 +10,7 @@ on:
 
 jobs:
   scrape:
+    name: Scrape data
     runs-on: ubuntu-22.04
     steps:
       - name: Setup timezone
