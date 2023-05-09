@@ -1,13 +1,12 @@
 name: Scrape and Deploy
 
 on:
+  workflow_dispatch:
+  repository_dispatch:
+    types:
+      - webhook
   schedule:
     - cron: '0 19 * * 1-5'
-  push:
-    branches:
-      - main
-    paths:
-      - 'db/dollarQuotes.json'
 
 jobs:
   scrape:
