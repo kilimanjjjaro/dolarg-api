@@ -1,9 +1,9 @@
 import scrapeIt from 'scrape-it'
 import pc from 'picocolors'
-import { type dollarQuotesInterface } from '../interfaces'
+import { type ExchangeRatesInterface } from '../interfaces'
 
 export const scraper = async () => {
-  const { data } = await scrapeIt<dollarQuotesInterface>(
+  const { data } = await scrapeIt<ExchangeRatesInterface>(
     'https://www.lanacion.com.ar/dolar-oficial-historico/',
     {
       dolarOficial: {

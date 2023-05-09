@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'db/dollarQuotes.json'
+      - 'db/exchangeRates.json'
 
 jobs:
   deploy:

@@ -1,4 +1,4 @@
-export interface dollarQuotesInterface {
+export interface ExchangeRatesInterface {
   dolarOficial: {
     compra: string
     venta: string
@@ -26,7 +26,7 @@ export interface dollarQuotesInterface {
 
 export interface newDollarQuotesInterface {
   date: string
-  results: dollarQuotesInterface
+  results: ExchangeRatesInterface
 }
 
 export interface currentDollarQuotesInterface {

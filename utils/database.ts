@@ -5,15 +5,15 @@ import {
   type newDollarQuotesInterface
 } from '../interfaces'
 
-export async function readDBFile () {
-  const data = await readFile(`${DB_PATH}/dollarQuotes.json`, 'utf-8')
+export async function readDBFile() {
+  const data = await readFile(`${DB_PATH}/exchangeRates.json`, 'utf-8')
 
   return data !== '' ? JSON.parse(data) : null
 }
 
-export async function writeDBFile (data: any) {
+export async function writeDBFile(data: any) {
   await writeFile(
-    `${DB_PATH}/dollarQuotes.json`,
+    `${DB_PATH}/exchangeRates.json`,
     JSON.stringify(data, null, 2),
     'utf-8'
   )
@@ -26,7 +26,9 @@ export const updateDollarQuotes = ({
   newDollarQuotes: newDollarQuotesInterface
   currentDollarQuotes: currentDollarQuotesInterface
 }) => {
-  if (currentDollarQuotes === null && newDollarQuotes !== null) { return { latest: newDollarQuotes, historical: [] } }
+  if (currentDollarQuotes === null && newDollarQuotes !== null) {
+    return { latest: newDollarQuotes, historical: [] }
+  }
 
   const latest = { ...currentDollarQuotes.latest }
   currentDollarQuotes.historical.unshift({ ...latest })

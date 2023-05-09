@@ -3,12 +3,12 @@
     "date": "09-05-2023 16:01:46",
     "results": {
       "dolarOficial": {
-        "compra": "$227,00",
-        "venta": "$237,00"
+        "compra": "$227",
+        "venta": "$237"
       },
       "dolarBlue": {
-        "compra": "$466,00",
-        "venta": "$471,00"
+        "compra": "$466",
+        "venta": "$471"
       },
       "dolarTarjeta": {
         "venta": "$414,75"
@@ -32,12 +32,12 @@
       "date": "09-05-2023 11:30:37",
       "results": {
         "dolarOficial": {
-          "compra": "$228,00",
-          "venta": "$236,00"
+          "compra": "$228",
+          "venta": "$236"
         },
         "dolarBlue": {
-          "compra": "$465,00",
-          "venta": "$470,00"
+          "compra": "$465",
+          "venta": "$470"
         },
         "dolarTarjeta": {
           "venta": "$413"
@@ -60,12 +60,12 @@
       "date": "08-05-2023 04:01:12",
       "results": {
         "dolarOficial": {
-          "compra": "$228,00",
-          "venta": "$236,00"
+          "compra": "$228",
+          "venta": "$236"
         },
         "dolarBlue": {
-          "compra": "$465,00",
-          "venta": "$470,00"
+          "compra": "$465",
+          "venta": "$470"
         },
         "dolarTarjeta": {
           "venta": "$413"
