@@ -31,8 +31,15 @@ export const updateDollarQuotes = ({
   }
 
   const latest = { ...currentDollarQuotes.latest }
-  currentDollarQuotes.historical.unshift({ ...latest })
+  const historical = [...currentDollarQuotes.historical]
+
+  if (historical.length >= 20) historical.pop()
+
+  historical.unshift({ ...latest })
+  currentDollarQuotes.historical = historical
   currentDollarQuotes.latest = newDollarQuotes
+
+  console.log(currentDollarQuotes.historical.length)
 
   return currentDollarQuotes
 }
