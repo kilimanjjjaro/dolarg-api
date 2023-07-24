@@ -39,7 +39,5 @@ export const updateDollarQuotes = ({
   currentDollarQuotes.historical = historical
   currentDollarQuotes.latest = newDollarQuotes
 
-  console.log(currentDollarQuotes.historical.length)
-
   return currentDollarQuotes
 }
