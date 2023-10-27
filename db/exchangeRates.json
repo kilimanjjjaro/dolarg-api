@@ -1,14 +1,14 @@
 {
   "latest": {
-    "date": "27-10-2023 12:04:22",
+    "date": "27-10-2023 16:02:00",
     "results": {
       "dolarOficial": {
         "compra": "$347,50",
         "venta": "$365,50"
       },
       "dolarBlue": {
-        "compra": "$930",
-        "venta": "$980"
+        "compra": "$940",
+        "venta": "$990"
       },
       "dolarTarjeta": {
         "venta": "$735,86"
@@ -17,10 +17,10 @@
         "venta": "$735,86"
       },
       "dolarMEP": {
-        "venta": "$855,48"
+        "venta": "$844,80"
       },
       "dolarCCL": {
-        "venta": "$858,68"
+        "venta": "$862,40"
       },
       "dolarMayorista": {
         "venta": "$350,02"
@@ -28,6 +28,34 @@
     }
   },
   "historical": [
+    {
+      "date": "27-10-2023 12:04:22",
+      "results": {
+        "dolarOficial": {
+          "compra": "$347,50",
+          "venta": "$365,50"
+        },
+        "dolarBlue": {
+          "compra": "$930",
+          "venta": "$980"
+        },
+        "dolarTarjeta": {
+          "venta": "$735,86"
+        },
+        "dolarTurista": {
+          "venta": "$735,86"
+        },
+        "dolarMEP": {
+          "venta": "$855,48"
+        },
+        "dolarCCL": {
+          "venta": "$858,68"
+        },
+        "dolarMayorista": {
+          "venta": "$350,02"
+        }
+      }
+    },
     {
       "date": "26-10-2023 16:02:29",
       "results": {
@@ -534,34 +562,6 @@
     },
     {
       "date": "13-10-2023 16:02:23",
-      "results": {
-        "dolarOficial": {
-          "compra": "$347,50",
-          "venta": "$365,50"
-        },
-        "dolarBlue": {
-          "compra": "$960",
-          "venta": "$980"
-        },
-        "dolarTarjeta": {
-          "venta": "$639,62"
-        },
-        "dolarTurista": {
-          "venta": "$659,93"
-        },
-        "dolarMEP": {
-          "venta": "$870,46"
-        },
-        "dolarCCL": {
-          "venta": "$966,96"
-        },
-        "dolarMayorista": {
-          "venta": "$350,03"
-        }
-      }
-    },
-    {
-      "date": "13-10-2023 12:04:27",
       "results": {
         "dolarOficial": {
           "compra": "$347,50",
