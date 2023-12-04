@@ -1,26 +1,26 @@
 {
   "latest": {
-    "date": "04-12-2023 12:04:14",
+    "date": "04-12-2023 16:02:04",
     "results": {
       "dolarOficial": {
-        "compra": "$361",
-        "venta": "$380,51"
+        "compra": "$360,84",
+        "venta": "$380,37"
       },
       "dolarBlue": {
-        "compra": "$920",
-        "venta": "$970"
+        "compra": "$900",
+        "venta": "$950"
       },
       "dolarTarjeta": {
-        "venta": "$970,3"
+        "venta": "$969,94"
       },
       "dolarTurista": {
-        "venta": "$970,3"
+        "venta": "$969,94"
       },
       "dolarMEP": {
-        "venta": "$903,23"
+        "venta": "$912,75"
       },
       "dolarCCL": {
-        "venta": "$913,44"
+        "venta": "$894,93"
       },
       "dolarMayorista": {
         "venta": "$360,53"
@@ -28,6 +28,34 @@
     }
   },
   "historical": [
+    {
+      "date": "04-12-2023 12:04:14",
+      "results": {
+        "dolarOficial": {
+          "compra": "$361",
+          "venta": "$380,51"
+        },
+        "dolarBlue": {
+          "compra": "$920",
+          "venta": "$970"
+        },
+        "dolarTarjeta": {
+          "venta": "$970,3"
+        },
+        "dolarTurista": {
+          "venta": "$970,3"
+        },
+        "dolarMEP": {
+          "venta": "$903,23"
+        },
+        "dolarCCL": {
+          "venta": "$913,44"
+        },
+        "dolarMayorista": {
+          "venta": "$360,53"
+        }
+      }
+    },
     {
       "date": "01-12-2023 16:02:04",
       "results": {
@@ -534,34 +562,6 @@
     },
     {
       "date": "20-11-2023 16:01:56",
-      "results": {
-        "dolarOficial": {
-          "compra": "$351,50",
-          "venta": "$369,50"
-        },
-        "dolarBlue": {
-          "compra": "$900",
-          "venta": "$950"
-        },
-        "dolarTarjeta": {
-          "venta": "$743,1"
-        },
-        "dolarTurista": {
-          "venta": "$743,1"
-        },
-        "dolarMEP": {
-          "venta": "$872,61"
-        },
-        "dolarCCL": {
-          "venta": "$876,27"
-        },
-        "dolarMayorista": {
-          "venta": "$353,48"
-        }
-      }
-    },
-    {
-      "date": "20-11-2023 12:04:23",
       "results": {
         "dolarOficial": {
           "compra": "$351,50",
