@@ -1,14 +1,14 @@
 {
   "latest": {
-    "date": "08-01-2024 12:04:35",
+    "date": "08-01-2024 16:01:54",
     "results": {
       "dolarOficial": {
         "compra": "$798,35",
         "venta": "$857,62"
       },
       "dolarBlue": {
-        "compra": "$975",
-        "venta": "$1025"
+        "compra": "$1000",
+        "venta": "$1050"
       },
       "dolarTarjeta": {
         "venta": "$1372,19"
@@ -20,7 +20,7 @@
         "venta": "$1033,56"
       },
       "dolarCCL": {
-        "venta": "$1162,97"
+        "venta": "$1177,54"
       },
       "dolarMayorista": {
         "venta": "$811,75"
@@ -28,6 +28,34 @@
     }
   },
   "historical": [
+    {
+      "date": "08-01-2024 12:04:35",
+      "results": {
+        "dolarOficial": {
+          "compra": "$798,35",
+          "venta": "$857,62"
+        },
+        "dolarBlue": {
+          "compra": "$975",
+          "venta": "$1025"
+        },
+        "dolarTarjeta": {
+          "venta": "$1372,19"
+        },
+        "dolarTurista": {
+          "venta": "$1372,19"
+        },
+        "dolarMEP": {
+          "venta": "$1033,56"
+        },
+        "dolarCCL": {
+          "venta": "$1162,97"
+        },
+        "dolarMayorista": {
+          "venta": "$811,75"
+        }
+      }
+    },
     {
       "date": "05-01-2024 16:01:53",
       "results": {
@@ -534,34 +562,6 @@
     },
     {
       "date": "25-12-2023 16:02:11",
-      "results": {
-        "dolarOficial": {
-          "compra": "$785,63",
-          "venta": "$843,78"
-        },
-        "dolarBlue": {
-          "compra": "$975",
-          "venta": "$995"
-        },
-        "dolarTarjeta": {
-          "venta": "$1350,05"
-        },
-        "dolarTurista": {
-          "venta": "$1350,05"
-        },
-        "dolarMEP": {
-          "venta": "$954,23"
-        },
-        "dolarCCL": {
-          "venta": "$941,96"
-        },
-        "dolarMayorista": {
-          "venta": "$804,23"
-        }
-      }
-    },
-    {
-      "date": "25-12-2023 12:04:29",
       "results": {
         "dolarOficial": {
           "compra": "$785,63",
