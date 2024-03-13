@@ -1,6 +1,6 @@
 # DolARG API
 
-Is an API to get the most commonly exchange rates of Argentina. The data is updated from Monday to Friday at 11 AM and 16 PM Argentina time.
+Is an API to get the most commonly exchange rates of Argentina. The data is updated from Monday to Friday at 12 AM and 16 PM Argentina time.
 
 URL: https://dolarg-api.hola6290.workers.dev
 
