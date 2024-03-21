@@ -1,33 +1,61 @@
 {
   "latest": {
-    "date": "20-03-2024 16:01:55",
+    "date": "21-03-2024 12:04:55",
     "results": {
       "dolarOficial": {
-        "compra": "$840,12",
-        "venta": "$898,22"
+        "compra": "$840,32",
+        "venta": "$898,83"
       },
       "dolarBlue": {
         "compra": "$1010",
         "venta": "$1030"
       },
       "dolarTarjeta": {
-        "venta": "$1437,15"
+        "venta": "$1438,13"
       },
       "dolarTurista": {
-        "venta": "$1437,15"
+        "venta": "$1438,13"
       },
       "dolarMEP": {
-        "venta": "$1038,87"
+        "venta": "$1037,24"
       },
       "dolarCCL": {
-        "venta": "$1096,57"
+        "venta": "$1097,23"
       },
       "dolarMayorista": {
-        "venta": "$853"
+        "venta": "$855"
       }
     }
   },
   "historical": [
+    {
+      "date": "20-03-2024 16:01:55",
+      "results": {
+        "dolarOficial": {
+          "compra": "$840,12",
+          "venta": "$898,22"
+        },
+        "dolarBlue": {
+          "compra": "$1010",
+          "venta": "$1030"
+        },
+        "dolarTarjeta": {
+          "venta": "$1437,15"
+        },
+        "dolarTurista": {
+          "venta": "$1437,15"
+        },
+        "dolarMEP": {
+          "venta": "$1038,87"
+        },
+        "dolarCCL": {
+          "venta": "$1096,57"
+        },
+        "dolarMayorista": {
+          "venta": "$853"
+        }
+      }
+    },
     {
       "date": "20-03-2024 12:04:06",
       "results": {
@@ -548,34 +576,6 @@
         },
         "dolarTurista": {
           "venta": "$1426,05"
-        },
-        "dolarMEP": {
-          "venta": "$996,43"
-        },
-        "dolarCCL": {
-          "venta": "$1027,42"
-        },
-        "dolarMayorista": {
-          "venta": "$845"
-        }
-      }
-    },
-    {
-      "date": "06-03-2024 16:01:44",
-      "results": {
-        "dolarOficial": {
-          "compra": "$831,86",
-          "venta": "$889,49"
-        },
-        "dolarBlue": {
-          "compra": "$970",
-          "venta": "$990"
-        },
-        "dolarTarjeta": {
-          "venta": "$1423,18"
-        },
-        "dolarTurista": {
-          "venta": "$1423,18"
         },
         "dolarMEP": {
           "venta": "$996,43"
