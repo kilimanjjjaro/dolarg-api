@@ -1,6 +1,6 @@
 {
   "latest": {
-    "date": "27-11-2024 12:04:48",
+    "date": "27-11-2024 16:02:01",
     "results": {
       "dolarOficial": {
         "compra": "$978,65",
@@ -17,17 +17,45 @@
         "venta": "$1659,14"
       },
       "dolarMEP": {
-        "venta": "$1076,02"
+        "venta": "$1074,09"
       },
       "dolarCCL": {
-        "venta": "$1105,97"
+        "venta": "$1103,97"
       },
       "dolarMayorista": {
-        "venta": "$1008"
+        "venta": "$1008,50"
       }
     }
   },
   "historical": [
+    {
+      "date": "27-11-2024 12:04:48",
+      "results": {
+        "dolarOficial": {
+          "compra": "$978,65",
+          "venta": "$1036,96"
+        },
+        "dolarBlue": {
+          "compra": "$1105",
+          "venta": "$1125"
+        },
+        "dolarTarjeta": {
+          "venta": "$1659,14"
+        },
+        "dolarTurista": {
+          "venta": "$1659,14"
+        },
+        "dolarMEP": {
+          "venta": "$1076,02"
+        },
+        "dolarCCL": {
+          "venta": "$1105,97"
+        },
+        "dolarMayorista": {
+          "venta": "$1008"
+        }
+      }
+    },
     {
       "date": "26-11-2024 16:02:15",
       "results": {
@@ -554,34 +582,6 @@
         },
         "dolarCCL": {
           "venta": "$1159,69"
-        },
-        "dolarMayorista": {
-          "venta": "$998,50"
-        }
-      }
-    },
-    {
-      "date": "13-11-2024 12:04:40",
-      "results": {
-        "dolarOficial": {
-          "compra": "$970,22",
-          "venta": "$1027,69"
-        },
-        "dolarBlue": {
-          "compra": "$1115",
-          "venta": "$1135"
-        },
-        "dolarTarjeta": {
-          "venta": "$1644,3"
-        },
-        "dolarTurista": {
-          "venta": "$1644,3"
-        },
-        "dolarMEP": {
-          "venta": "$1124,23"
-        },
-        "dolarCCL": {
-          "venta": "$1157,11"
         },
         "dolarMayorista": {
           "venta": "$998,50"
