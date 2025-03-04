@@ -1,6 +1,6 @@
 {
   "latest": {
-    "date": "04-03-2025 12:05:06",
+    "date": "04-03-2025 16:02:02",
     "results": {
       "dolarOficial": {
         "compra": "$1044,25",
@@ -28,6 +28,34 @@
     }
   },
   "historical": [
+    {
+      "date": "04-03-2025 12:05:06",
+      "results": {
+        "dolarOficial": {
+          "compra": "$1044,25",
+          "venta": "$1084,25"
+        },
+        "dolarBlue": {
+          "compra": "$1210",
+          "venta": "$1230"
+        },
+        "dolarTarjeta": {
+          "venta": "$1409,53"
+        },
+        "dolarTurista": {
+          "venta": "$1409,53"
+        },
+        "dolarMEP": {
+          "venta": "$1228,48"
+        },
+        "dolarCCL": {
+          "venta": "$1219,98"
+        },
+        "dolarMayorista": {
+          "venta": "$1063,25"
+        }
+      }
+    },
     {
       "date": "03-03-2025 16:02:05",
       "results": {
@@ -554,34 +582,6 @@
         },
         "dolarCCL": {
           "venta": "$1218"
-        },
-        "dolarMayorista": {
-          "venta": "$1058,50"
-        }
-      }
-    },
-    {
-      "date": "17-02-2025 16:02:10",
-      "results": {
-        "dolarOficial": {
-          "compra": "$1038,75",
-          "venta": "$1078,75"
-        },
-        "dolarBlue": {
-          "compra": "$1215",
-          "venta": "$1235"
-        },
-        "dolarTarjeta": {
-          "venta": "$1402,38"
-        },
-        "dolarTurista": {
-          "venta": "$1402,38"
-        },
-        "dolarMEP": {
-          "venta": "$1206,48"
-        },
-        "dolarCCL": {
-          "venta": "$1206,98"
         },
         "dolarMayorista": {
           "venta": "$1058,50"
