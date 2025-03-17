@@ -1,14 +1,14 @@
 {
   "latest": {
-    "date": "17-03-2025 12:04:54",
+    "date": "17-03-2025 16:02:06",
     "results": {
       "dolarOficial": {
         "compra": "$1048,25",
         "venta": "$1088,25"
       },
       "dolarBlue": {
-        "compra": "$1225",
-        "venta": "$1245"
+        "compra": "$1230",
+        "venta": "$1250"
       },
       "dolarTarjeta": {
         "venta": "$1414,72"
@@ -17,17 +17,45 @@
         "venta": "$1414,72"
       },
       "dolarMEP": {
-        "venta": "$1246,70"
+        "venta": "$1253,51"
       },
       "dolarCCL": {
-        "venta": "$1245,35"
+        "venta": "$1257,50"
       },
       "dolarMayorista": {
-        "venta": "$1068,50"
+        "venta": "$1067,75"
       }
     }
   },
   "historical": [
+    {
+      "date": "17-03-2025 12:04:54",
+      "results": {
+        "dolarOficial": {
+          "compra": "$1048,25",
+          "venta": "$1088,25"
+        },
+        "dolarBlue": {
+          "compra": "$1225",
+          "venta": "$1245"
+        },
+        "dolarTarjeta": {
+          "venta": "$1414,72"
+        },
+        "dolarTurista": {
+          "venta": "$1414,72"
+        },
+        "dolarMEP": {
+          "venta": "$1246,70"
+        },
+        "dolarCCL": {
+          "venta": "$1245,35"
+        },
+        "dolarMayorista": {
+          "venta": "$1068,50"
+        }
+      }
+    },
     {
       "date": "14-03-2025 16:02:12",
       "results": {
@@ -534,34 +562,6 @@
     },
     {
       "date": "03-03-2025 16:02:05",
-      "results": {
-        "dolarOficial": {
-          "compra": "$1044,25",
-          "venta": "$1084,25"
-        },
-        "dolarBlue": {
-          "compra": "$1210",
-          "venta": "$1230"
-        },
-        "dolarTarjeta": {
-          "venta": "$1409,53"
-        },
-        "dolarTurista": {
-          "venta": "$1409,53"
-        },
-        "dolarMEP": {
-          "venta": "$1228,48"
-        },
-        "dolarCCL": {
-          "venta": "$1219,98"
-        },
-        "dolarMayorista": {
-          "venta": "$1063,25"
-        }
-      }
-    },
-    {
-      "date": "03-03-2025 12:05:08",
       "results": {
         "dolarOficial": {
           "compra": "$1044,25",
