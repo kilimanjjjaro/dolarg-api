@@ -1,20 +1,20 @@
 {
   "latest": {
-    "date": "15-05-2025 12:05:07",
+    "date": "15-05-2025 16:02:07",
     "results": {
       "dolarOficial": {
-        "compra": "$1100",
-        "venta": "$1150"
+        "compra": "$1106,11",
+        "venta": "$1155,20"
       },
       "dolarBlue": {
-        "compra": "$1145",
-        "venta": "$1165"
+        "compra": "$1140",
+        "venta": "$1160"
       },
       "dolarTarjeta": {
-        "venta": "$1495,0"
+        "venta": "$1501,76"
       },
       "dolarTurista": {
-        "venta": "$1495,0"
+        "venta": "$1501,76"
       },
       "dolarMEP": {
         "venta": "$1140,92"
@@ -28,6 +28,34 @@
     }
   },
   "historical": [
+    {
+      "date": "15-05-2025 12:05:07",
+      "results": {
+        "dolarOficial": {
+          "compra": "$1100",
+          "venta": "$1150"
+        },
+        "dolarBlue": {
+          "compra": "$1145",
+          "venta": "$1165"
+        },
+        "dolarTarjeta": {
+          "venta": "$1495,0"
+        },
+        "dolarTurista": {
+          "venta": "$1495,0"
+        },
+        "dolarMEP": {
+          "venta": "$1140,92"
+        },
+        "dolarCCL": {
+          "venta": "$1137"
+        },
+        "dolarMayorista": {
+          "venta": "$1230,00$1305"
+        }
+      }
+    },
     {
       "date": "14-05-2025 16:02:05",
       "results": {
@@ -534,34 +562,6 @@
     },
     {
       "date": "01-05-2025 16:02:04",
-      "results": {
-        "dolarOficial": {
-          "compra": "$1143,55",
-          "venta": "$1193,88"
-        },
-        "dolarBlue": {
-          "compra": "$1165",
-          "venta": "$1185"
-        },
-        "dolarTarjeta": {
-          "venta": "$1552,04"
-        },
-        "dolarTurista": {
-          "venta": "$1552,04"
-        },
-        "dolarMEP": {
-          "venta": "$1183,37"
-        },
-        "dolarCCL": {
-          "venta": "$1195,73"
-        },
-        "dolarMayorista": {
-          "venta": "$1172"
-        }
-      }
-    },
-    {
-      "date": "01-05-2025 12:05:13",
       "results": {
         "dolarOficial": {
           "compra": "$1143,55",
