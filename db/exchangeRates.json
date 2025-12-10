@@ -1,23 +1,23 @@
 {
   "latest": {
-    "date": "09-12-2025 16:02:16",
+    "date": "10-12-2025 12:06:53",
     "results": {
       "dolarOficial": {
-        "compra": "$1412,30",
-        "venta": "$1463,14"
+        "compra": "$1414,16",
+        "venta": "$1464,85"
       },
       "dolarBlue": {
-        "compra": "$1425",
-        "venta": "$1445"
+        "compra": "$1430",
+        "venta": "$1450"
       },
       "dolarTarjeta": {
-        "venta": "$1902,08"
+        "venta": "$1904,3"
       },
       "dolarTurista": {
-        "venta": "$1505,40"
+        "venta": "$1504,44"
       },
       "dolarMEP": {
-        "venta": "$1470,76"
+        "venta": "$1471,42"
       },
       "dolarCCL": {
         "venta": "$1441"
@@ -28,6 +28,34 @@
     }
   },
   "historical": [
+    {
+      "date": "09-12-2025 16:02:16",
+      "results": {
+        "dolarOficial": {
+          "compra": "$1412,30",
+          "venta": "$1463,14"
+        },
+        "dolarBlue": {
+          "compra": "$1425",
+          "venta": "$1445"
+        },
+        "dolarTarjeta": {
+          "venta": "$1902,08"
+        },
+        "dolarTurista": {
+          "venta": "$1505,40"
+        },
+        "dolarMEP": {
+          "venta": "$1470,76"
+        },
+        "dolarCCL": {
+          "venta": "$1441"
+        },
+        "dolarMayorista": {
+          "venta": "$1620,00$1720"
+        }
+      }
+    },
     {
       "date": "09-12-2025 12:05:52",
       "results": {
@@ -551,34 +579,6 @@
         },
         "dolarMEP": {
           "venta": "$1480,68"
-        },
-        "dolarCCL": {
-          "venta": "$1439"
-        },
-        "dolarMayorista": {
-          "venta": "$1620,00$1720"
-        }
-      }
-    },
-    {
-      "date": "25-11-2025 16:02:07",
-      "results": {
-        "dolarOficial": {
-          "compra": "$1420,51",
-          "venta": "$1471,87"
-        },
-        "dolarBlue": {
-          "compra": "$1440",
-          "venta": "$1460"
-        },
-        "dolarTarjeta": {
-          "venta": "$1913,43"
-        },
-        "dolarTurista": {
-          "venta": "$1516,75"
-        },
-        "dolarMEP": {
-          "venta": "$1474,80"
         },
         "dolarCCL": {
           "venta": "$1439"
