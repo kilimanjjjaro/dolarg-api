@@ -1,26 +1,26 @@
 {
   "latest": {
-    "date": "08-01-2026 12:07:07",
+    "date": "08-01-2026 16:03:29",
     "results": {
       "dolarOficial": {
         "compra": "$1435",
         "venta": "$1485"
       },
       "dolarBlue": {
-        "compra": "$1490",
-        "venta": "$1510"
+        "compra": "$1485",
+        "venta": "$1505"
       },
       "dolarTarjeta": {
         "venta": "$1930,5"
       },
       "dolarTurista": {
-        "venta": "$1534,75"
+        "venta": "$1529,86"
       },
       "dolarMEP": {
-        "venta": "$1495,28"
+        "venta": "$1494,28"
       },
       "dolarCCL": {
-        "venta": "$1460"
+        "venta": "$1464"
       },
       "dolarMayorista": {
         "venta": "$1650,00$1750"
@@ -28,6 +28,34 @@
     }
   },
   "historical": [
+    {
+      "date": "08-01-2026 12:07:07",
+      "results": {
+        "dolarOficial": {
+          "compra": "$1435",
+          "venta": "$1485"
+        },
+        "dolarBlue": {
+          "compra": "$1490",
+          "venta": "$1510"
+        },
+        "dolarTarjeta": {
+          "venta": "$1930,5"
+        },
+        "dolarTurista": {
+          "venta": "$1534,75"
+        },
+        "dolarMEP": {
+          "venta": "$1495,28"
+        },
+        "dolarCCL": {
+          "venta": "$1460"
+        },
+        "dolarMayorista": {
+          "venta": "$1650,00$1750"
+        }
+      }
+    },
     {
       "date": "07-01-2026 16:04:00",
       "results": {
@@ -534,34 +562,6 @@
     },
     {
       "date": "25-12-2025 16:02:20",
-      "results": {
-        "dolarOficial": {
-          "compra": "$1425",
-          "venta": "$1475"
-        },
-        "dolarBlue": {
-          "compra": "$1485",
-          "venta": "$1505"
-        },
-        "dolarTarjeta": {
-          "venta": "$1917,5"
-        },
-        "dolarTurista": {
-          "venta": "$1526,89"
-        },
-        "dolarMEP": {
-          "venta": "$1481,63"
-        },
-        "dolarCCL": {
-          "venta": "$1450"
-        },
-        "dolarMayorista": {
-          "venta": "$1650,00$1750"
-        }
-      }
-    },
-    {
-      "date": "25-12-2025 12:05:33",
       "results": {
         "dolarOficial": {
           "compra": "$1425",
