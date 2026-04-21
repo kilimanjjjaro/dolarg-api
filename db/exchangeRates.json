@@ -1,6 +1,6 @@
 {
   "latest": {
-    "date": "21-04-2026 12:32:10",
+    "date": "21-04-2026 16:26:37",
     "results": {
       "dolarOficial": {
         "compra": "$1350",
@@ -14,13 +14,13 @@
         "venta": "$1820"
       },
       "dolarTurista": {
-        "venta": "$1473,70"
+        "venta": "$1464,40"
       },
       "dolarMEP": {
-        "venta": "$1418,13"
+        "venta": "$1412,99"
       },
       "dolarCCL": {
-        "venta": "$1377"
+        "venta": "$1375,50"
       },
       "dolarMayorista": {
         "venta": "$1565,00$1665"
@@ -28,6 +28,34 @@
     }
   },
   "historical": [
+    {
+      "date": "21-04-2026 12:32:10",
+      "results": {
+        "dolarOficial": {
+          "compra": "$1350",
+          "venta": "$1400"
+        },
+        "dolarBlue": {
+          "compra": "$1390",
+          "venta": "$1410"
+        },
+        "dolarTarjeta": {
+          "venta": "$1820"
+        },
+        "dolarTurista": {
+          "venta": "$1473,70"
+        },
+        "dolarMEP": {
+          "venta": "$1418,13"
+        },
+        "dolarCCL": {
+          "venta": "$1377"
+        },
+        "dolarMayorista": {
+          "venta": "$1565,00$1665"
+        }
+      }
+    },
     {
       "date": "20-04-2026 16:24:00",
       "results": {
@@ -551,34 +579,6 @@
         },
         "dolarMEP": {
           "venta": "$1431,74"
-        },
-        "dolarCCL": {
-          "venta": "$1393"
-        },
-        "dolarMayorista": {
-          "venta": "$1555,00$1655"
-        }
-      }
-    },
-    {
-      "date": "07-04-2026 12:32:35",
-      "results": {
-        "dolarOficial": {
-          "compra": "$1365",
-          "venta": "$1415"
-        },
-        "dolarBlue": {
-          "compra": "$1380",
-          "venta": "$1400"
-        },
-        "dolarTarjeta": {
-          "venta": "$1839,5"
-        },
-        "dolarTurista": {
-          "venta": "$1489,93"
-        },
-        "dolarMEP": {
-          "venta": "$1432,45"
         },
         "dolarCCL": {
           "venta": "$1393"
