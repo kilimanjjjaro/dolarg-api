@@ -1,6 +1,6 @@
 {
   "latest": {
-    "date": "20-04-2026 16:24:00",
+    "date": "21-04-2026 12:32:10",
     "results": {
       "dolarOficial": {
         "compra": "$1350",
@@ -14,20 +14,48 @@
         "venta": "$1820"
       },
       "dolarTurista": {
-        "venta": "$1469,61"
+        "venta": "$1473,70"
       },
       "dolarMEP": {
-        "venta": "$1416,43"
+        "venta": "$1418,13"
       },
       "dolarCCL": {
         "venta": "$1377"
       },
       "dolarMayorista": {
-        "venta": "$1570,00$1670"
+        "venta": "$1565,00$1665"
       }
     }
   },
   "historical": [
+    {
+      "date": "20-04-2026 16:24:00",
+      "results": {
+        "dolarOficial": {
+          "compra": "$1350",
+          "venta": "$1400"
+        },
+        "dolarBlue": {
+          "compra": "$1390",
+          "venta": "$1410"
+        },
+        "dolarTarjeta": {
+          "venta": "$1820"
+        },
+        "dolarTurista": {
+          "venta": "$1469,61"
+        },
+        "dolarMEP": {
+          "venta": "$1416,43"
+        },
+        "dolarCCL": {
+          "venta": "$1377"
+        },
+        "dolarMayorista": {
+          "venta": "$1570,00$1670"
+        }
+      }
+    },
     {
       "date": "20-04-2026 12:32:37",
       "results": {
@@ -551,34 +579,6 @@
         },
         "dolarMEP": {
           "venta": "$1432,45"
-        },
-        "dolarCCL": {
-          "venta": "$1393"
-        },
-        "dolarMayorista": {
-          "venta": "$1555,00$1655"
-        }
-      }
-    },
-    {
-      "date": "06-04-2026 16:21:59",
-      "results": {
-        "dolarOficial": {
-          "compra": "$1365",
-          "venta": "$1415"
-        },
-        "dolarBlue": {
-          "compra": "$1380",
-          "venta": "$1400"
-        },
-        "dolarTarjeta": {
-          "venta": "$1839,5"
-        },
-        "dolarTurista": {
-          "venta": "$1481,79"
-        },
-        "dolarMEP": {
-          "venta": "$1428,22"
         },
         "dolarCCL": {
           "venta": "$1393"
