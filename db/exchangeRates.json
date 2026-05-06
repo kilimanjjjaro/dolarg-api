@@ -1,6 +1,6 @@
 {
   "latest": {
-    "date": "06-05-2026 12:47:29",
+    "date": "06-05-2026 16:31:53",
     "results": {
       "dolarOficial": {
         "compra": "$1360",
@@ -14,13 +14,13 @@
         "venta": "$1833"
       },
       "dolarTurista": {
-        "venta": "$1480,52"
+        "venta": "$1481,25"
       },
       "dolarMEP": {
-        "venta": "$1423,58"
+        "venta": "$1426,79"
       },
       "dolarCCL": {
-        "venta": "$1393"
+        "venta": "$1388"
       },
       "dolarMayorista": {
         "venta": "$1580,00$1680"
@@ -28,6 +28,34 @@
     }
   },
   "historical": [
+    {
+      "date": "06-05-2026 12:47:29",
+      "results": {
+        "dolarOficial": {
+          "compra": "$1360",
+          "venta": "$1410"
+        },
+        "dolarBlue": {
+          "compra": "$1380",
+          "venta": "$1400"
+        },
+        "dolarTarjeta": {
+          "venta": "$1833"
+        },
+        "dolarTurista": {
+          "venta": "$1480,52"
+        },
+        "dolarMEP": {
+          "venta": "$1423,58"
+        },
+        "dolarCCL": {
+          "venta": "$1393"
+        },
+        "dolarMayorista": {
+          "venta": "$1580,00$1680"
+        }
+      }
+    },
     {
       "date": "05-05-2026 16:30:20",
       "results": {
@@ -554,34 +582,6 @@
         },
         "dolarCCL": {
           "venta": "$1378"
-        },
-        "dolarMayorista": {
-          "venta": "$1565,00$1665"
-        }
-      }
-    },
-    {
-      "date": "22-04-2026 12:30:38",
-      "results": {
-        "dolarOficial": {
-          "compra": "$1350",
-          "venta": "$1400"
-        },
-        "dolarBlue": {
-          "compra": "$1390",
-          "venta": "$1410"
-        },
-        "dolarTarjeta": {
-          "venta": "$1820"
-        },
-        "dolarTurista": {
-          "venta": "$1468,04"
-        },
-        "dolarMEP": {
-          "venta": "$1417,44"
-        },
-        "dolarCCL": {
-          "venta": "$1375,50"
         },
         "dolarMayorista": {
           "venta": "$1565,00$1665"
