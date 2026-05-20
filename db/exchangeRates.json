@@ -1,6 +1,6 @@
 {
   "latest": {
-    "date": "20-05-2026 13:12:08",
+    "date": "20-05-2026 16:42:49",
     "results": {
       "dolarOficial": {
         "compra": "$1370",
@@ -14,13 +14,13 @@
         "venta": "$1846"
       },
       "dolarTurista": {
-        "venta": "$1491,05"
+        "venta": "$1488,44"
       },
       "dolarMEP": {
-        "venta": "$1431,76"
+        "venta": "$1431,35"
       },
       "dolarCCL": {
-        "venta": "$1398"
+        "venta": "$1397"
       },
       "dolarMayorista": {
         "venta": "$1570,00$1670"
@@ -28,6 +28,34 @@
     }
   },
   "historical": [
+    {
+      "date": "20-05-2026 13:12:08",
+      "results": {
+        "dolarOficial": {
+          "compra": "$1370",
+          "venta": "$1420"
+        },
+        "dolarBlue": {
+          "compra": "$1410",
+          "venta": "$1430"
+        },
+        "dolarTarjeta": {
+          "venta": "$1846"
+        },
+        "dolarTurista": {
+          "venta": "$1491,05"
+        },
+        "dolarMEP": {
+          "venta": "$1431,76"
+        },
+        "dolarCCL": {
+          "venta": "$1398"
+        },
+        "dolarMayorista": {
+          "venta": "$1570,00$1670"
+        }
+      }
+    },
     {
       "date": "19-05-2026 16:32:32",
       "results": {
@@ -554,34 +582,6 @@
         },
         "dolarCCL": {
           "venta": "$1388"
-        },
-        "dolarMayorista": {
-          "venta": "$1580,00$1680"
-        }
-      }
-    },
-    {
-      "date": "06-05-2026 12:47:29",
-      "results": {
-        "dolarOficial": {
-          "compra": "$1360",
-          "venta": "$1410"
-        },
-        "dolarBlue": {
-          "compra": "$1380",
-          "venta": "$1400"
-        },
-        "dolarTarjeta": {
-          "venta": "$1833"
-        },
-        "dolarTurista": {
-          "venta": "$1480,52"
-        },
-        "dolarMEP": {
-          "venta": "$1423,58"
-        },
-        "dolarCCL": {
-          "venta": "$1393"
         },
         "dolarMayorista": {
           "venta": "$1580,00$1680"
