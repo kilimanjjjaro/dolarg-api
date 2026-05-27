@@ -1,6 +1,6 @@
 {
   "latest": {
-    "date": "27-05-2026 13:19:22",
+    "date": "27-05-2026 16:39:34",
     "results": {
       "dolarOficial": {
         "compra": "$1380",
@@ -14,20 +14,48 @@
         "venta": "$1859"
       },
       "dolarTurista": {
-        "venta": "$1480,24"
+        "venta": "$1481,03"
       },
       "dolarMEP": {
-        "venta": "$1431,13"
+        "venta": "$1430,53"
       },
       "dolarCCL": {
-        "venta": "$1411"
+        "venta": "$1412,50"
       },
       "dolarMayorista": {
-        "venta": "$1585,00$1685"
+        "venta": "$1590,00$1690"
       }
     }
   },
   "historical": [
+    {
+      "date": "27-05-2026 13:19:22",
+      "results": {
+        "dolarOficial": {
+          "compra": "$1380",
+          "venta": "$1430"
+        },
+        "dolarBlue": {
+          "compra": "$1420",
+          "venta": "$1440"
+        },
+        "dolarTarjeta": {
+          "venta": "$1859"
+        },
+        "dolarTurista": {
+          "venta": "$1480,24"
+        },
+        "dolarMEP": {
+          "venta": "$1431,13"
+        },
+        "dolarCCL": {
+          "venta": "$1411"
+        },
+        "dolarMayorista": {
+          "venta": "$1585,00$1685"
+        }
+      }
+    },
     {
       "date": "26-05-2026 16:38:19",
       "results": {
@@ -554,34 +582,6 @@
         },
         "dolarCCL": {
           "venta": "$1392"
-        },
-        "dolarMayorista": {
-          "venta": "$1570,00$1670"
-        }
-      }
-    },
-    {
-      "date": "13-05-2026 12:54:11",
-      "results": {
-        "dolarOficial": {
-          "compra": "$1360",
-          "venta": "$1410"
-        },
-        "dolarBlue": {
-          "compra": "$1395",
-          "venta": "$1415"
-        },
-        "dolarTarjeta": {
-          "venta": "$1833"
-        },
-        "dolarTurista": {
-          "venta": "$1478,76"
-        },
-        "dolarMEP": {
-          "venta": "$1422,64"
-        },
-        "dolarCCL": {
-          "venta": "$1384"
         },
         "dolarMayorista": {
           "venta": "$1570,00$1670"
