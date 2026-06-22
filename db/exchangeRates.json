@@ -1,6 +1,6 @@
 {
   "latest": {
-    "date": "19-06-2026 16:31:32",
+    "date": "22-06-2026 13:34:47",
     "results": {
       "dolarOficial": {
         "compra": "$1430",
@@ -14,20 +14,48 @@
         "venta": "$1924"
       },
       "dolarTurista": {
-        "venta": "$1495,21"
+        "venta": "$1523,73"
       },
       "dolarMEP": {
-        "venta": "$1478,47"
+        "venta": "$1481,63"
       },
       "dolarCCL": {
-        "venta": "$1451"
+        "venta": "$1461"
       },
       "dolarMayorista": {
-        "venta": "$1620,00$1720"
+        "venta": "$1610,00$1710"
       }
     }
   },
   "historical": [
+    {
+      "date": "19-06-2026 16:31:32",
+      "results": {
+        "dolarOficial": {
+          "compra": "$1430",
+          "venta": "$1480"
+        },
+        "dolarBlue": {
+          "compra": "$1435,60",
+          "venta": "$1480"
+        },
+        "dolarTarjeta": {
+          "venta": "$1924"
+        },
+        "dolarTurista": {
+          "venta": "$1495,21"
+        },
+        "dolarMEP": {
+          "venta": "$1478,47"
+        },
+        "dolarCCL": {
+          "venta": "$1451"
+        },
+        "dolarMayorista": {
+          "venta": "$1620,00$1720"
+        }
+      }
+    },
     {
       "date": "19-06-2026 13:01:31",
       "results": {
@@ -551,34 +579,6 @@
         },
         "dolarMEP": {
           "venta": "$1462,39"
-        },
-        "dolarCCL": {
-          "venta": "$1440,50"
-        },
-        "dolarMayorista": {
-          "venta": "$1610,00$1710"
-        }
-      }
-    },
-    {
-      "date": "05-06-2026 16:32:29",
-      "results": {
-        "dolarOficial": {
-          "compra": "$1410",
-          "venta": "$1460"
-        },
-        "dolarBlue": {
-          "compra": "$1410",
-          "venta": "$1435"
-        },
-        "dolarTarjeta": {
-          "venta": "$1898"
-        },
-        "dolarTurista": {
-          "venta": "$1516,50"
-        },
-        "dolarMEP": {
-          "venta": "$1460,58"
         },
         "dolarCCL": {
           "venta": "$1440,50"
