@@ -1,23 +1,23 @@
 {
   "latest": {
-    "date": "23-07-2026 17:07:11",
+    "date": "24-07-2026 13:41:10",
     "results": {
       "dolarOficial": {
-        "compra": "$1460",
-        "venta": "$1510"
+        "compra": "$1465",
+        "venta": "$1515"
       },
       "dolarBlue": {
-        "compra": "$1503,50",
-        "venta": "$1550"
+        "compra": "$1498,65",
+        "venta": "$1545"
       },
       "dolarTarjeta": {
-        "venta": "$1963"
+        "venta": "$1969,50"
       },
       "dolarTurista": {
-        "venta": "$1583,75"
+        "venta": "$1587,17"
       },
       "dolarMEP": {
-        "venta": "$1518,41"
+        "venta": "$1524,64"
       },
       "dolarCCL": {
         "venta": "$1489"
@@ -28,6 +28,34 @@
     }
   },
   "historical": [
+    {
+      "date": "23-07-2026 17:07:11",
+      "results": {
+        "dolarOficial": {
+          "compra": "$1460",
+          "venta": "$1510"
+        },
+        "dolarBlue": {
+          "compra": "$1503,50",
+          "venta": "$1550"
+        },
+        "dolarTarjeta": {
+          "venta": "$1963"
+        },
+        "dolarTurista": {
+          "venta": "$1583,75"
+        },
+        "dolarMEP": {
+          "venta": "$1518,41"
+        },
+        "dolarCCL": {
+          "venta": "$1489"
+        },
+        "dolarMayorista": {
+          "venta": "$1680,00$1740"
+        }
+      }
+    },
     {
       "date": "23-07-2026 13:25:21",
       "results": {
@@ -534,34 +562,6 @@
     },
     {
       "date": "10-07-2026 13:55:31",
-      "results": {
-        "dolarOficial": {
-          "compra": "$1460",
-          "venta": "$1510"
-        },
-        "dolarBlue": {
-          "compra": "$1464,70",
-          "venta": "$1510"
-        },
-        "dolarTarjeta": {
-          "venta": "$1963"
-        },
-        "dolarTurista": {
-          "venta": "$1600,79"
-        },
-        "dolarMEP": {
-          "venta": "$1529,66"
-        },
-        "dolarCCL": {
-          "venta": "$1488"
-        },
-        "dolarMayorista": {
-          "venta": "$1650,00$1750"
-        }
-      }
-    },
-    {
-      "date": "09-07-2026 17:41:54",
       "results": {
         "dolarOficial": {
           "compra": "$1460",
