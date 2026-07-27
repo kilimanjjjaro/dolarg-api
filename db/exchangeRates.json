@@ -1,23 +1,23 @@
 {
   "latest": {
-    "date": "27-07-2026 13:56:29",
+    "date": "27-07-2026 17:14:22",
     "results": {
       "dolarOficial": {
         "compra": "$1470",
         "venta": "$1520"
       },
       "dolarBlue": {
-        "compra": "$1518,05",
-        "venta": "$1565"
+        "compra": "$1513,20",
+        "venta": "$1560"
       },
       "dolarTarjeta": {
         "venta": "$1976"
       },
       "dolarTurista": {
-        "venta": "$1594,43"
+        "venta": "$1600,22"
       },
       "dolarMEP": {
-        "venta": "$1531,53"
+        "venta": "$1531,99"
       },
       "dolarCCL": {
         "venta": "$1497"
@@ -28,6 +28,34 @@
     }
   },
   "historical": [
+    {
+      "date": "27-07-2026 13:56:29",
+      "results": {
+        "dolarOficial": {
+          "compra": "$1470",
+          "venta": "$1520"
+        },
+        "dolarBlue": {
+          "compra": "$1518,05",
+          "venta": "$1565"
+        },
+        "dolarTarjeta": {
+          "venta": "$1976"
+        },
+        "dolarTurista": {
+          "venta": "$1594,43"
+        },
+        "dolarMEP": {
+          "venta": "$1531,53"
+        },
+        "dolarCCL": {
+          "venta": "$1497"
+        },
+        "dolarMayorista": {
+          "venta": "$1680,00$1740"
+        }
+      }
+    },
     {
       "date": "24-07-2026 17:11:21",
       "results": {
@@ -534,34 +562,6 @@
     },
     {
       "date": "13-07-2026 17:06:06",
-      "results": {
-        "dolarOficial": {
-          "compra": "$1460",
-          "venta": "$1510"
-        },
-        "dolarBlue": {
-          "compra": "$1464,70",
-          "venta": "$1510"
-        },
-        "dolarTarjeta": {
-          "venta": "$1963"
-        },
-        "dolarTurista": {
-          "venta": "$1561,86"
-        },
-        "dolarMEP": {
-          "venta": "$1517,73"
-        },
-        "dolarCCL": {
-          "venta": "$1488"
-        },
-        "dolarMayorista": {
-          "venta": "$1650,00$1750"
-        }
-      }
-    },
-    {
-      "date": "13-07-2026 14:11:41",
       "results": {
         "dolarOficial": {
           "compra": "$1460",
