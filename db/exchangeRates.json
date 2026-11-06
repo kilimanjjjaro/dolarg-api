@@ -1,6 +1,6 @@
 {
   "latest": {
-    "date": "05-11-2026 20:53:25",
+    "date": "06-11-2026 17:41:46",
     "results": {
       "dolarOficial": {
         "compra": "$1515",
@@ -14,13 +14,13 @@
         "venta": "$2052,70"
       },
       "dolarTurista": {
-        "venta": "$1664,74"
+        "venta": "$1671,78"
       },
       "dolarMEP": {
-        "venta": "$1579,04"
+        "venta": "$1577,76"
       },
       "dolarCCL": {
-        "venta": "$1546"
+        "venta": "$1545,50"
       },
       "dolarMayorista": {
         "venta": "$1715,00$1795"
@@ -28,6 +28,34 @@
     }
   },
   "historical": [
+    {
+      "date": "05-11-2026 20:53:25",
+      "results": {
+        "dolarOficial": {
+          "compra": "$1515",
+          "venta": "$1579"
+        },
+        "dolarBlue": {
+          "compra": "$1508,35",
+          "venta": "$1555"
+        },
+        "dolarTarjeta": {
+          "venta": "$2052,70"
+        },
+        "dolarTurista": {
+          "venta": "$1664,74"
+        },
+        "dolarMEP": {
+          "venta": "$1579,04"
+        },
+        "dolarCCL": {
+          "venta": "$1546"
+        },
+        "dolarMayorista": {
+          "venta": "$1715,00$1795"
+        }
+      }
+    },
     {
       "date": "05-11-2026 18:20:16",
       "results": {
@@ -551,34 +579,6 @@
         },
         "dolarMEP": {
           "venta": "$1555,45"
-        },
-        "dolarCCL": {
-          "venta": "$1528"
-        },
-        "dolarMayorista": {
-          "venta": "$1690,00$1770"
-        }
-      }
-    },
-    {
-      "date": "22-10-2026 18:59:49",
-      "results": {
-        "dolarOficial": {
-          "compra": "$1496",
-          "venta": "$1560"
-        },
-        "dolarBlue": {
-          "compra": "$1518,05",
-          "venta": "$1565"
-        },
-        "dolarTarjeta": {
-          "venta": "$2028"
-        },
-        "dolarTurista": {
-          "venta": "$1660,78"
-        },
-        "dolarMEP": {
-          "venta": "$1551,87"
         },
         "dolarCCL": {
           "venta": "$1528"
