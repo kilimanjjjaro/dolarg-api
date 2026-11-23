@@ -1,0 +1,10 @@
+[
+  { "currency": "dolarOficial", "field": "compra", "expected": "$1548" },
+  { "currency": "dolarOficial", "field": "venta", "expected": "$1642" },
+  { "currency": "dolarBlue", "field": "compra", "expected": "$1624,75" },
+  { "currency": "dolarBlue", "field": "venta", "expected": "$1675" },
+  { "currency": "dolarTarjeta", "field": "venta", "expected": "$2134,60" },
+  { "currency": "dolarMEP", "field": "venta", "expected": "$1701,05" },
+  { "currency": "dolarCCL", "field": "venta", "expected": "$1736,94" },
+  { "currency": "dolarMayorista", "field": "venta", "expected": "$1580" }
+]

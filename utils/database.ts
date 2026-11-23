@@ -1,22 +1,18 @@
 import { readFile, writeFile } from 'node:fs/promises'
-import { DB_PATH } from '../constants'
+import { DB_FILE, HISTORICAL_LIMIT } from '../constants'
 import {
   type currentDollarQuotesInterface,
   type newDollarQuotesInterface
 } from '../interfaces'
 
-export async function readDBFile() {
-  const data = await readFile(`${DB_PATH}/exchangeRates.json`, 'utf-8')
+export async function readDBFile(file = DB_FILE) {
+  const data = await readFile(file, 'utf-8')
 
   return data !== '' ? JSON.parse(data) : null
 }
 
-export async function writeDBFile(data: any) {
-  await writeFile(
-    `${DB_PATH}/exchangeRates.json`,
-    JSON.stringify(data, null, 2),
-    'utf-8'
-  )
+export async function writeDBFile(data: any, file = DB_FILE) {
+  await writeFile(file, JSON.stringify(data, null, 2), 'utf-8')
 }
 
 export const updateDollarQuotes = ({
@@ -33,7 +29,7 @@ export const updateDollarQuotes = ({
   const latest = { ...currentDollarQuotes.latest }
   const historical = [...currentDollarQuotes.historical]
 
-  if (historical.length >= 20) historical.pop()
+  if (historical.length >= HISTORICAL_LIMIT) historical.pop()
 
   historical.unshift({ ...latest })
   currentDollarQuotes.historical = historical

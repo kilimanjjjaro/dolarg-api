@@ -10,7 +10,11 @@
     "format:check": "prettier --check .",
     "format:write": "prettier --write .",
     "lint:check": "eslint .",
-    "lint:fix": "eslint --fix ."
+    "lint:fix": "eslint --fix .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "build": "wrangler publish --dry-run --outdir dist",
+    "test:all": "pnpm format:check && pnpm typecheck && pnpm lint:check && pnpm test && pnpm build"
   },
   "dependencies": {
     "dayjs": "^1.11.7",
@@ -20,6 +24,7 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20230419.0",
+    "@types/node": "26.6.6",
     "@typescript-eslint/eslint-plugin": "^5.59.5",
     "eslint": "^8.40.0",
     "eslint-config-prettier": "^8.8.0",
@@ -30,7 +35,9 @@
     "prettier": "^2.8.8",
     "tsx": "4.23.15",
     "typescript": "^5.0.4",
-    "wrangler": "2.20.0"
+    "vitest": "5.1.1",
+    "wrangler": "2.20.0",
+    "zod": "4.6.7"
   },
   "volta": {
     "node": "26.13.1"
