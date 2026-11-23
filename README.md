@@ -66,8 +66,10 @@ pnpm scrape  # Scrape LA NACIÓN and update db/exchangeRates.json
 - `utils`: the scraper, the database helpers and the logger
 - `constants`, `interfaces`: shared values and types
 - `db/exchangeRates.json`: the stored quotes, updated by the scrape workflow
-- `tests/unit`: Vitest tests, with their constants, helpers and the saved LA
-  NACIÓN page in `tests/constants`, `tests/utils` and `tests/fixtures`
+- `tests/unit`: Vitest unit tests, with their constants, helpers and the saved
+  LA NACIÓN page in `tests/constants`, `tests/utils` and `tests/fixtures`
+- `tests/worker`: Vitest tests that run the bundled Worker on workerd, the
+  Cloudflare Workers runtime, through the Wrangler test harness
 
 ## Checks
 
@@ -75,7 +77,7 @@ pnpm scrape  # Scrape LA NACIÓN and update db/exchangeRates.json
 pnpm format:check  # Prettier (pnpm format fixes the files)
 pnpm typecheck     # TypeScript
 pnpm lint          # ESLint
-pnpm test          # Unit tests (Vitest)
+pnpm test          # Unit and Worker tests (Vitest)
 pnpm build         # Wrangler dry run build
 pnpm test:all      # All of the above, in order
 ```
