@@ -1,7 +1,6 @@
 import { readFile } from 'node:fs/promises'
 import { describe, expect, it } from 'vitest'
 import { HISTORICAL_LIMIT } from '../../constants'
-import { type currentDollarQuotesInterface } from '../../interfaces'
 import {
   readDBFile,
   updateDollarQuotes,
@@ -17,7 +16,7 @@ describe('updateDollarQuotes', () => {
   const newDollarQuotes = buildQuote(NEW_QUOTE_HOURS)
 
   it('starts the database with the new quote and an empty historical', () => {
-    const currentDollarQuotes = null as unknown as currentDollarQuotesInterface
+    const currentDollarQuotes = null
 
     expect(
       updateDollarQuotes({ newDollarQuotes, currentDollarQuotes })
@@ -43,7 +42,7 @@ describe('updateDollarQuotes', () => {
     expect(updated.historical).toEqual([latest, ...historical.slice(0, -1)])
   })
 
-  it.fails('does not modify the current quotes', () => {
+  it('does not modify the current quotes', () => {
     const currentDollarQuotes = buildDollarQuotes(HISTORICAL_LIMIT)
     const snapshot = structuredClone(currentDollarQuotes)
 

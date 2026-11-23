@@ -20,20 +20,17 @@ export const updateDollarQuotes = ({
   currentDollarQuotes
 }: {
   newDollarQuotes: newDollarQuotesInterface
-  currentDollarQuotes: currentDollarQuotesInterface
-}) => {
-  if (currentDollarQuotes === null && newDollarQuotes !== null) {
+  currentDollarQuotes: currentDollarQuotesInterface | null
+}): currentDollarQuotesInterface => {
+  if (currentDollarQuotes === null) {
     return { latest: newDollarQuotes, historical: [] }
   }
 
-  const latest = { ...currentDollarQuotes.latest }
-  const historical = [...currentDollarQuotes.historical]
-
-  if (historical.length >= HISTORICAL_LIMIT) historical.pop()
-
-  historical.unshift({ ...latest })
-  currentDollarQuotes.historical = historical
-  currentDollarQuotes.latest = newDollarQuotes
-
-  return currentDollarQuotes
+  return {
+    latest: newDollarQuotes,
+    historical: [
+      currentDollarQuotes.latest,
+      ...currentDollarQuotes.historical
+    ].slice(0, HISTORICAL_LIMIT)
+  }
 }
