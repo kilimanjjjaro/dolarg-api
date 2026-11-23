@@ -17,10 +17,10 @@
     "test:all": "pnpm format:check && pnpm typecheck && pnpm lint:check && pnpm test && pnpm build"
   },
   "dependencies": {
-    "dayjs": "^1.11.7",
-    "hono": "^3.1.8",
-    "picocolors": "^1.0.0",
-    "scrape-it": "^6.0.1"
+    "dayjs": "1.11.23",
+    "hono": "4.13.20",
+    "picocolors": "1.1.1",
+    "scrape-it": "6.1.17"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20230419.0",
