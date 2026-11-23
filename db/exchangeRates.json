@@ -21,10 +21,6 @@
       },
       "dolarMayorista": {
         "venta": "$1580"
-      },
-      "euro": {
-        "compra": "$1710",
-        "venta": "$1790"
       }
     }
   },
@@ -51,10 +47,6 @@
         },
         "dolarMayorista": {
           "venta": "$1580"
-        },
-        "euro": {
-          "compra": "$1710",
-          "venta": "$1790"
         }
       }
     },
@@ -80,10 +72,6 @@
         },
         "dolarMayorista": {
           "venta": "$1565"
-        },
-        "euro": {
-          "compra": "$1700",
-          "venta": "$1780"
         }
       }
     },
@@ -109,10 +97,6 @@
         },
         "dolarMayorista": {
           "venta": "$1565"
-        },
-        "euro": {
-          "compra": "$1700",
-          "venta": "$1780"
         }
       }
     },
@@ -138,10 +122,6 @@
         },
         "dolarMayorista": {
           "venta": "$1559,50"
-        },
-        "euro": {
-          "compra": "$1685",
-          "venta": "$1765"
         }
       }
     },
@@ -167,10 +147,6 @@
         },
         "dolarMayorista": {
           "venta": "$1559,50"
-        },
-        "euro": {
-          "compra": "$1685",
-          "venta": "$1765"
         }
       }
     },
@@ -196,10 +172,6 @@
         },
         "dolarMayorista": {
           "venta": "$1552"
-        },
-        "euro": {
-          "compra": "$1685",
-          "venta": "$1765"
         }
       }
     },
@@ -225,10 +197,6 @@
         },
         "dolarMayorista": {
           "venta": "$1552"
-        },
-        "euro": {
-          "compra": "$1685",
-          "venta": "$1765"
         }
       }
     },
@@ -254,10 +222,6 @@
         },
         "dolarMayorista": {
           "venta": "$1551"
-        },
-        "euro": {
-          "compra": "$1715",
-          "venta": "$1795"
         }
       }
     },
@@ -283,10 +247,6 @@
         },
         "dolarMayorista": {
           "venta": "$1551"
-        },
-        "euro": {
-          "compra": "$1715",
-          "venta": "$1795"
         }
       }
     },
@@ -312,10 +272,6 @@
         },
         "dolarMayorista": {
           "venta": "$1543,50"
-        },
-        "euro": {
-          "compra": "$1715",
-          "venta": "$1795"
         }
       }
     },
@@ -341,10 +297,6 @@
         },
         "dolarMayorista": {
           "venta": "$1543,50"
-        },
-        "euro": {
-          "compra": "$1715",
-          "venta": "$1795"
         }
       }
     },
@@ -370,10 +322,6 @@
         },
         "dolarMayorista": {
           "venta": "$1544"
-        },
-        "euro": {
-          "compra": "$1715",
-          "venta": "$1795"
         }
       }
     },
@@ -399,10 +347,6 @@
         },
         "dolarMayorista": {
           "venta": "$1544"
-        },
-        "euro": {
-          "compra": "$1715",
-          "venta": "$1795"
         }
       }
     },
@@ -428,10 +372,6 @@
         },
         "dolarMayorista": {
           "venta": "$1544"
-        },
-        "euro": {
-          "compra": "$1715",
-          "venta": "$1795"
         }
       }
     },
@@ -457,10 +397,6 @@
         },
         "dolarMayorista": {
           "venta": "$1544"
-        },
-        "euro": {
-          "compra": "$1715",
-          "venta": "$1795"
         }
       }
     },
@@ -486,10 +422,6 @@
         },
         "dolarMayorista": {
           "venta": "$1545,50"
-        },
-        "euro": {
-          "compra": "$1715",
-          "venta": "$1795"
         }
       }
     },
@@ -515,10 +447,6 @@
         },
         "dolarMayorista": {
           "venta": "$1545,50"
-        },
-        "euro": {
-          "compra": "$1715",
-          "venta": "$1795"
         }
       }
     },
@@ -544,10 +472,6 @@
         },
         "dolarMayorista": {
           "venta": "$1545,50"
-        },
-        "euro": {
-          "compra": "$1715",
-          "venta": "$1795"
         }
       }
     },
@@ -573,10 +497,6 @@
         },
         "dolarMayorista": {
           "venta": "$1545,50"
-        },
-        "euro": {
-          "compra": "$1715",
-          "venta": "$1795"
         }
       }
     },
@@ -602,10 +522,6 @@
         },
         "dolarMayorista": {
           "venta": "$1545,50"
-        },
-        "euro": {
-          "compra": "$1715",
-          "venta": "$1795"
         }
       }
     }

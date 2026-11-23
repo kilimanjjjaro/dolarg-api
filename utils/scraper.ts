@@ -75,8 +75,7 @@ const toExchangeRates = ({ rows }: ScrapedPage): ExchangeRatesInterface => {
     dolarTarjeta: sale(SOURCE_TITLES.dolarTarjeta),
     dolarMEP: sale(SOURCE_TITLES.dolarMEP),
     dolarCCL: sale(SOURCE_TITLES.dolarCCL),
-    dolarMayorista: sale(SOURCE_TITLES.dolarMayorista),
-    euro: purchaseAndSale(SOURCE_TITLES.euro)
+    dolarMayorista: sale(SOURCE_TITLES.dolarMayorista)
   }
 }
 

@@ -6,6 +6,5 @@ export const FIXTURE_RATES: ExchangeRatesInterface = {
   dolarTarjeta: { venta: '$2134,60' },
   dolarMEP: { venta: '$1701,05' },
   dolarCCL: { venta: '$1736,94' },
-  dolarMayorista: { venta: '$1580' },
-  euro: { compra: '$1710', venta: '$1790' }
+  dolarMayorista: { venta: '$1580' }
 }
