@@ -94,7 +94,7 @@ describe('scrapeAndSave', () => {
     expect(await readFile(file, 'utf-8')).toBe(content)
   })
 
-  it.fails('rejects when scraping fails, so the workflow stops', async () => {
+  it('rejects when scraping fails, so the workflow stops', async () => {
     scrapeItMock.mockRejectedValue(new Error('network down'))
     const file = await createDbFile('')
 

@@ -1,3 +1,5 @@
 import { scrapeAndSave } from './scrapeAndSave'
 
-await scrapeAndSave()
+await scrapeAndSave().catch(() => {
+  process.exitCode = 1
+})

@@ -36,11 +36,20 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Run scrape and push changes
+      - name: Scrape data
+        run: pnpm scrape
+
+      - name: Check the database
+        run: pnpm test
+
+      - name: Push changes
         run: |
-          pnpm scrape
           git config --local user.email "hola@kilimanjjjaro.com"
           git config --local user.name "kili-bot"
-          git add .
+          git add db/exchangeRates.json
+          if git diff --cached --quiet; then
+            echo "The database did not change"
+            exit 0
+          fi
           git commit -m "[kili-bot] Update database"
           git push origin main

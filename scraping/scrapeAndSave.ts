@@ -27,7 +27,8 @@ export async function scrapeAndSave(dbFile = DB_FILE) {
     await writeDBFile(updatedDollarQuotes, dbFile)
     logSuccess('Saving to database finished')
   } catch (error) {
-    logError('Scraping failed')
+    logError(`Scraping failed: ${String(error)}`)
+    throw error
   } finally {
     const end = performance.now()
     const time = (end - start) / 1000
