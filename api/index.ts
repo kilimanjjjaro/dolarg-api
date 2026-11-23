@@ -5,7 +5,7 @@ import data from '../db/exchangeRates.json'
 const app = new Hono()
 
 app.use(
-  '/api',
+  '*',
   cors({
     origin: '*',
     allowMethods: ['GET']

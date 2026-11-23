@@ -1,4 +1,5 @@
 export const HTTP_STATUS_OK = 200
+export const HTTP_STATUS_NO_CONTENT = 204
 export const HTTP_STATUS_NOT_FOUND = 404
 
 export const SINGLE_CALL = 1
