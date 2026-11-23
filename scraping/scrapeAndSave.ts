@@ -1,6 +1,7 @@
 import dayjs from 'dayjs'
-import { DATE_FORMAT, DB_FILE } from '../constants'
-import { scraper, logError, logInfo, logSuccess } from '../utils/scraper'
+import { DATE_FORMAT, DB_FILE, MS_PER_SECOND } from '../constants'
+import { scraper } from '../utils/scraper'
+import { logError, logInfo, logSuccess } from '../utils/logger'
 import { readDBFile, writeDBFile, updateDollarQuotes } from '../utils/database'
 
 export async function scrapeAndSave(dbFile = DB_FILE) {
@@ -31,7 +32,7 @@ export async function scrapeAndSave(dbFile = DB_FILE) {
     throw error
   } finally {
     const end = performance.now()
-    const time = (end - start) / 1000
+    const time = (end - start) / MS_PER_SECOND
 
     logInfo(`Scraping took ${time} seconds`)
   }

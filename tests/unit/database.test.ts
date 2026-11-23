@@ -1,19 +1,21 @@
 import { readFile } from 'node:fs/promises'
 import { describe, expect, it } from 'vitest'
-import { HISTORICAL_LIMIT } from '../../constants'
+import { FIRST_INDEX, HISTORICAL_LIMIT, JSON_INDENT } from '../../constants'
 import {
   readDBFile,
   updateDollarQuotes,
   writeDBFile
 } from '../../utils/database'
-import { JSON_INDENT } from '../constants/unit'
+import {
+  LAST_INDEX_OFFSET,
+  NEW_QUOTE_HOURS_AGO,
+  SINGLE_QUOTE
+} from '../constants/unit'
 import { useTempDbFile } from '../utils/files'
 import { buildDollarQuotes, buildQuote } from '../utils/quotes'
 
-const NEW_QUOTE_HOURS = -1
-
 describe('updateDollarQuotes', () => {
-  const newDollarQuotes = buildQuote(NEW_QUOTE_HOURS)
+  const newDollarQuotes = buildQuote(NEW_QUOTE_HOURS_AGO)
 
   it('starts the database with the new quote and an empty historical', () => {
     const currentDollarQuotes = null
@@ -24,7 +26,9 @@ describe('updateDollarQuotes', () => {
   })
 
   it('moves the latest quote to the start of the historical', () => {
-    const currentDollarQuotes = buildDollarQuotes(HISTORICAL_LIMIT - 1)
+    const currentDollarQuotes = buildDollarQuotes(
+      HISTORICAL_LIMIT - SINGLE_QUOTE
+    )
     const { latest, historical } = structuredClone(currentDollarQuotes)
 
     expect(
@@ -39,7 +43,10 @@ describe('updateDollarQuotes', () => {
     const updated = updateDollarQuotes({ newDollarQuotes, currentDollarQuotes })
 
     expect(updated.historical).toHaveLength(HISTORICAL_LIMIT)
-    expect(updated.historical).toEqual([latest, ...historical.slice(0, -1)])
+    expect(updated.historical).toEqual([
+      latest,
+      ...historical.slice(FIRST_INDEX, -LAST_INDEX_OFFSET)
+    ])
   })
 
   it('does not modify the current quotes', () => {
@@ -59,6 +66,12 @@ describe('database file', () => {
     const file = await createDbFile('')
 
     expect(await readDBFile(file)).toBeNull()
+  })
+
+  it('fails when the file does not hold the dollar quotes', async () => {
+    const file = await createDbFile(JSON.stringify({ latest: null }))
+
+    await expect(readDBFile(file)).rejects.toThrow(file)
   })
 
   it('writes indented json that reads back the same', async () => {

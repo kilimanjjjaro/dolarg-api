@@ -1,4 +1,4 @@
-import { type ExchangeRatesInterface } from '../../interfaces'
+import type { ExchangeRatesInterface } from '../../interfaces'
 
 export const FIXTURE_RATES: ExchangeRatesInterface = {
   dolarOficial: { compra: '$1548', venta: '$1642' },

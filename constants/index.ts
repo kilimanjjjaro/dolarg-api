@@ -18,3 +18,13 @@ export const SOURCE_TITLES = {
 } as const
 
 export const DATE_FORMAT = 'DD-MM-YYYY HH:mm:ss'
+
+export const EMPTY_CENTS = ',00'
+
+export const JSON_INDENT = 2
+
+export const FIRST_INDEX = 0
+
+export const MS_PER_SECOND = 1000
+
+export const FAILURE_EXIT_CODE = 1

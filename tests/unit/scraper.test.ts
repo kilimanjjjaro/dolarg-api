@@ -3,7 +3,7 @@ import { SOURCE_TITLES } from '../../constants'
 import { parseExchangeRates, removeCents } from '../../utils/scraper'
 import { FIXTURE_RATES } from '../constants/quotes'
 import { PRICE_PATTERN } from '../constants/schemas'
-import { readLaNacionPage } from '../utils/fixtures'
+import { readLaNacionPage, reverseRows } from '../utils/fixtures'
 import { allRateValues } from '../utils/rates'
 import REMOVE_CENTS_CASES from '../constants/remove-cents-cases.json'
 
@@ -32,11 +32,7 @@ describe('parseExchangeRates', () => {
   })
 
   it('reads the same rates when La Nacion reorders its rows', () => {
-    const reversed = html.replace(
-      /(<ul class="dolar-subgroup[^>]*>)([\s\S]*?)(<\/ul>)/u,
-      (_, start: string, rows: string, end: string) =>
-        `${start}${rows.split('</li>').reverse().join('</li>')}${end}`
-    )
+    const reversed = reverseRows(html)
 
     expect(reversed).not.toBe(html)
     expect(parseExchangeRates(reversed)).toEqual(FIXTURE_RATES)

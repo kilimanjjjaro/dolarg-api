@@ -5,8 +5,12 @@ import { HISTORICAL_LIMIT, SOURCE_URL } from '../../constants'
 import { scrapeAndSave } from '../../scraping/scrapeAndSave'
 import { EXCHANGE_RATES_OPTIONS, scraper } from '../../utils/scraper'
 import { FIXTURE_RATES } from '../constants/quotes'
-import { SCRAPE_DATE, SCRAPE_DATE_TEXT, SINGLE_CALL } from '../constants/unit'
-import { readLaNacionPage } from '../utils/fixtures'
+import {
+  SCRAPE_DATE,
+  SCRAPE_DATE_TEXT,
+  SINGLE_CALL,
+  SINGLE_QUOTE
+} from '../constants/unit'
 import { useTempDbFile } from '../utils/files'
 import { buildDollarQuotes } from '../utils/quotes'
 
@@ -14,19 +18,22 @@ vi.mock('scrape-it', async (importOriginal) => {
   const { default: actual } = await importOriginal<{
     default: typeof scrapeIt
   }>()
+  const { readLaNacionPage } = await import('../utils/fixtures')
 
   return {
-    default: Object.assign(vi.fn(), { scrapeHTML: actual.scrapeHTML })
+    default: Object.assign(
+      vi.fn(
+        async (_url: string, options: scrapeIt.ScrapeOptions) =>
+          await Promise.resolve({
+            data: actual.scrapeHTML(readLaNacionPage(), options)
+          })
+      ),
+      { scrapeHTML: actual.scrapeHTML }
+    )
   }
 })
 
 const scrapeItMock = vi.mocked(scrapeIt)
-
-function resolveScrape() {
-  scrapeItMock.mockResolvedValue({
-    data: scrapeIt.scrapeHTML(readLaNacionPage(), EXCHANGE_RATES_OPTIONS)
-  } as unknown as Awaited<ReturnType<typeof scrapeIt>>)
-}
 
 describe('scraper', () => {
   beforeEach(() => {
@@ -34,8 +41,6 @@ describe('scraper', () => {
   })
 
   it('scrapes the exchange rates from the La Nacion page', async () => {
-    resolveScrape()
-
     expect(await scraper()).toEqual(FIXTURE_RATES)
     expect(scrapeItMock).toHaveBeenCalledTimes(SINGLE_CALL)
     expect(scrapeItMock).toHaveBeenCalledWith(
@@ -60,8 +65,7 @@ describe('scrapeAndSave', () => {
   })
 
   it('saves the scraped rates as the latest quote and moves the previous one to the historical', async () => {
-    resolveScrape()
-    const current = buildDollarQuotes(HISTORICAL_LIMIT - 1)
+    const current = buildDollarQuotes(HISTORICAL_LIMIT - SINGLE_QUOTE)
     const file = await createDbFile(JSON.stringify(current))
 
     await scrapeAndSave(file)
@@ -73,7 +77,6 @@ describe('scrapeAndSave', () => {
   })
 
   it('starts an empty database with the scraped rates', async () => {
-    resolveScrape()
     const file = await createDbFile('')
 
     await scrapeAndSave(file)

@@ -12,8 +12,6 @@ app.use(
   })
 )
 
-app.get('/', (ctx) => {
-  return ctx.json(data)
-})
+app.get('/', (ctx) => ctx.json(data))
 
 export default app

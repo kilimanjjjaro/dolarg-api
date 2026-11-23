@@ -1,7 +1,11 @@
 import scrapeIt from 'scrape-it'
-import pc from 'picocolors'
-import { SOURCE_TITLES, SOURCE_URL } from '../constants'
-import { type ExchangeRatesInterface } from '../interfaces'
+import {
+  EMPTY_CENTS,
+  FIRST_INDEX,
+  SOURCE_TITLES,
+  SOURCE_URL
+} from '../constants'
+import type { ExchangeRatesInterface } from '../interfaces'
 
 interface CurrencyRow {
   title: string
@@ -24,12 +28,10 @@ export const EXCHANGE_RATES_OPTIONS: scrapeIt.ScrapeOptions = {
   }
 }
 
-export const removeCents = (value: string): string => {
-  if (typeof value === 'string' && value.endsWith(',00')) {
-    return value.slice(0, -3)
-  }
-  return value
-}
+export const removeCents = (value: string) =>
+  value.endsWith(EMPTY_CENTS)
+    ? value.slice(FIRST_INDEX, -EMPTY_CENTS.length)
+    : value
 
 const normalizeText = (text: string) => text.trim().toLowerCase()
 
@@ -78,11 +80,10 @@ const toExchangeRates = ({ rows }: ScrapedPage): ExchangeRatesInterface => {
   }
 }
 
-export const parseExchangeRates = (html: string) => {
-  return toExchangeRates(
+export const parseExchangeRates = (html: string) =>
+  toExchangeRates(
     scrapeIt.scrapeHTML<ScrapedPage>(html, EXCHANGE_RATES_OPTIONS)
   )
-}
 
 export const scraper = async () => {
   const { data } = await scrapeIt<ScrapedPage>(
@@ -91,20 +92,4 @@ export const scraper = async () => {
   )
 
   return toExchangeRates(data)
-}
-
-const symbol = {
-  info: pc.blue('ℹ'),
-  success: pc.green('✔'),
-  error: pc.red('✖')
-}
-
-export const logInfo = (args: string) => {
-  console.log(`${symbol.info} ${pc.blue(args)}`)
-}
-export const logError = (args: string) => {
-  console.log(`${symbol.error} ${pc.red(args)}`)
-}
-export const logSuccess = (args: string) => {
-  console.log(`${symbol.success} ${pc.green(args)}`)
 }

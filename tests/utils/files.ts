@@ -2,6 +2,7 @@ import { mkdtemp, rm, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { afterEach } from 'vitest'
+import { FIRST_INDEX } from '../../constants'
 import { DB_FILE_NAME } from '../constants/unit'
 
 export function useTempDbFile() {
@@ -9,7 +10,7 @@ export function useTempDbFile() {
 
   afterEach(async () => {
     await Promise.all(
-      directories.splice(0).map(async (directory) => {
+      directories.splice(FIRST_INDEX).map(async (directory) => {
         await rm(directory, { recursive: true, force: true })
       })
     )

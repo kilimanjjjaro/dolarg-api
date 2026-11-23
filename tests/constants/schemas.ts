@@ -1,11 +1,16 @@
 import { z } from 'zod'
 import { HISTORICAL_LIMIT } from '../../constants'
 
-const DATE_PATTERN = /^\d{2}-\d{2}-\d{4} \d{2}:\d{2}:\d{2}$/u
+const DATE_PATTERN = /^\d{2}-\d{2}-\d{4} \d{2}:\d{2}:\d{2}$/v
 
-export const PRICE_PATTERN = /^\$\d+(,\d{1,2})?$/u
+export const PRICE_PATTERN = /^\$\d+(?:,\d{1,2})?$/v
 
 const PRICE = z.string().regex(PRICE_PATTERN)
+
+export const RATE_TABLE_SCHEMA = z.record(
+  z.string(),
+  z.record(z.string(), z.string())
+)
 
 const SALE = z.strictObject({ venta: PRICE })
 

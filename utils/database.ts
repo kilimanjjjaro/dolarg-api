@@ -1,18 +1,45 @@
 import { readFile, writeFile } from 'node:fs/promises'
-import { DB_FILE, HISTORICAL_LIMIT } from '../constants'
 import {
-  type currentDollarQuotesInterface,
-  type newDollarQuotesInterface
+  DB_FILE,
+  FIRST_INDEX,
+  HISTORICAL_LIMIT,
+  JSON_INDENT
+} from '../constants'
+import type {
+  currentDollarQuotesInterface,
+  newDollarQuotesInterface
 } from '../interfaces'
 
-export async function readDBFile(file = DB_FILE) {
+const isDollarQuotes = (
+  value: unknown
+): value is currentDollarQuotesInterface =>
+  typeof value === 'object' &&
+  value !== null &&
+  'latest' in value &&
+  'historical' in value &&
+  Array.isArray(value.historical)
+
+export async function readDBFile(
+  file = DB_FILE
+): Promise<currentDollarQuotesInterface | null> {
   const data = await readFile(file, 'utf-8')
 
-  return data !== '' ? JSON.parse(data) : null
+  if (data === '') return null
+
+  const parsed: unknown = JSON.parse(data)
+
+  if (!isDollarQuotes(parsed)) {
+    throw new Error(`${file} does not hold the dollar quotes`)
+  }
+
+  return parsed
 }
 
-export async function writeDBFile(data: any, file = DB_FILE) {
-  await writeFile(file, JSON.stringify(data, null, 2), 'utf-8')
+export async function writeDBFile(
+  data: currentDollarQuotesInterface,
+  file = DB_FILE
+) {
+  await writeFile(file, JSON.stringify(data, null, JSON_INDENT), 'utf-8')
 }
 
 export const updateDollarQuotes = ({
@@ -31,6 +58,6 @@ export const updateDollarQuotes = ({
     historical: [
       currentDollarQuotes.latest,
       ...currentDollarQuotes.historical
-    ].slice(0, HISTORICAL_LIMIT)
+    ].slice(FIRST_INDEX, HISTORICAL_LIMIT)
   }
 }

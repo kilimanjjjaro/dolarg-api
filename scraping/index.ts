@@ -1,5 +1,6 @@
+import { FAILURE_EXIT_CODE } from '../constants'
 import { scrapeAndSave } from './scrapeAndSave'
 
 await scrapeAndSave().catch(() => {
-  process.exitCode = 1
+  process.exitCode = FAILURE_EXIT_CODE
 })

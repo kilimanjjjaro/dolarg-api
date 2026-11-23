@@ -13,7 +13,7 @@ describe('GET /', () => {
     const response = await app.request('/')
 
     expect(response.status).toBe(HTTP_STATUS_OK)
-    expect(response.headers.get('content-type')).toMatch(/^application\/json/u)
+    expect(response.headers.get('content-type')).toMatch(/^application\/json/v)
     expect(await response.json()).toEqual(data)
   })
 
