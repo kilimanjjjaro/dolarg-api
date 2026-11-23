@@ -5,15 +5,13 @@ import data from '../db/exchangeRates.json'
 const app = new Hono()
 
 app.use(
-  '/api',
+  '*',
   cors({
     origin: '*',
     allowMethods: ['GET']
   })
 )
 
-app.get('/', (ctx) => {
-  return ctx.json(data)
-})
+app.get('/', (ctx) => ctx.json(data))
 
 export default app

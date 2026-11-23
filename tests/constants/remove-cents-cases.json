@@ -1,0 +1,8 @@
+[
+  { "value": "$1548,00", "expected": "$1548" },
+  { "value": "$0,00", "expected": "$0" },
+  { "value": "$1615,05", "expected": "$1615,05" },
+  { "value": "$1000", "expected": "$1000" },
+  { "value": "$1,00,50", "expected": "$1,00,50" },
+  { "value": "", "expected": "" }
+]

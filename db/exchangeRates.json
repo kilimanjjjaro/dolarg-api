@@ -13,17 +13,18 @@
       "dolarTarjeta": {
         "venta": "$2095,60"
       },
-      "dolarTurista": {
-        "venta": "$1772,35"
-      },
       "dolarMEP": {
         "venta": "$1649,43"
       },
       "dolarCCL": {
-        "venta": "$1580"
+        "venta": "$1772,35"
       },
       "dolarMayorista": {
-        "venta": "$1710,00$1790"
+        "venta": "$1580"
+      },
+      "euro": {
+        "compra": "$1710",
+        "venta": "$1790"
       }
     }
   },
@@ -42,17 +43,18 @@
         "dolarTarjeta": {
           "venta": "$2095,60"
         },
-        "dolarTurista": {
-          "venta": "$1772,35"
-        },
         "dolarMEP": {
           "venta": "$1649,43"
         },
         "dolarCCL": {
-          "venta": "$1580"
+          "venta": "$1772,35"
         },
         "dolarMayorista": {
-          "venta": "$1710,00$1790"
+          "venta": "$1580"
+        },
+        "euro": {
+          "compra": "$1710",
+          "venta": "$1790"
         }
       }
     },
@@ -70,17 +72,18 @@
         "dolarTarjeta": {
           "venta": "$2073,50"
         },
-        "dolarTurista": {
-          "venta": "$1757,49"
-        },
         "dolarMEP": {
           "venta": "$1634,90"
         },
         "dolarCCL": {
-          "venta": "$1565"
+          "venta": "$1757,49"
         },
         "dolarMayorista": {
-          "venta": "$1700,00$1780"
+          "venta": "$1565"
+        },
+        "euro": {
+          "compra": "$1700",
+          "venta": "$1780"
         }
       }
     },
@@ -98,17 +101,18 @@
         "dolarTarjeta": {
           "venta": "$2073,50"
         },
-        "dolarTurista": {
-          "venta": "$1757,49"
-        },
         "dolarMEP": {
           "venta": "$1634,90"
         },
         "dolarCCL": {
-          "venta": "$1565"
+          "venta": "$1757,49"
         },
         "dolarMayorista": {
-          "venta": "$1700,00$1780"
+          "venta": "$1565"
+        },
+        "euro": {
+          "compra": "$1700",
+          "venta": "$1780"
         }
       }
     },
@@ -126,17 +130,18 @@
         "dolarTarjeta": {
           "venta": "$2067"
         },
-        "dolarTurista": {
-          "venta": "$1707,07"
-        },
         "dolarMEP": {
           "venta": "$1603,50"
         },
         "dolarCCL": {
-          "venta": "$1559,50"
+          "venta": "$1707,07"
         },
         "dolarMayorista": {
-          "venta": "$1685,00$1765"
+          "venta": "$1559,50"
+        },
+        "euro": {
+          "compra": "$1685",
+          "venta": "$1765"
         }
       }
     },
@@ -154,17 +159,18 @@
         "dolarTarjeta": {
           "venta": "$2067"
         },
-        "dolarTurista": {
-          "venta": "$1707,07"
-        },
         "dolarMEP": {
           "venta": "$1603,50"
         },
         "dolarCCL": {
-          "venta": "$1559,50"
+          "venta": "$1707,07"
         },
         "dolarMayorista": {
-          "venta": "$1685,00$1765"
+          "venta": "$1559,50"
+        },
+        "euro": {
+          "compra": "$1685",
+          "venta": "$1765"
         }
       }
     },
@@ -182,17 +188,18 @@
         "dolarTarjeta": {
           "venta": "$2057,90"
         },
-        "dolarTurista": {
-          "venta": "$1672,14"
-        },
         "dolarMEP": {
           "venta": "$1607,50"
         },
         "dolarCCL": {
-          "venta": "$1552"
+          "venta": "$1672,14"
         },
         "dolarMayorista": {
-          "venta": "$1685,00$1765"
+          "venta": "$1552"
+        },
+        "euro": {
+          "compra": "$1685",
+          "venta": "$1765"
         }
       }
     },
@@ -210,17 +217,18 @@
         "dolarTarjeta": {
           "venta": "$2057,90"
         },
-        "dolarTurista": {
-          "venta": "$1672,14"
-        },
         "dolarMEP": {
           "venta": "$1607,50"
         },
         "dolarCCL": {
-          "venta": "$1552"
+          "venta": "$1672,14"
         },
         "dolarMayorista": {
-          "venta": "$1685,00$1765"
+          "venta": "$1552"
+        },
+        "euro": {
+          "compra": "$1685",
+          "venta": "$1765"
         }
       }
     },
@@ -238,17 +246,18 @@
         "dolarTarjeta": {
           "venta": "$2052,70"
         },
-        "dolarTurista": {
-          "venta": "$1720,04"
-        },
         "dolarMEP": {
           "venta": "$1575,08"
         },
         "dolarCCL": {
-          "venta": "$1551"
+          "venta": "$1720,04"
         },
         "dolarMayorista": {
-          "venta": "$1715,00$1795"
+          "venta": "$1551"
+        },
+        "euro": {
+          "compra": "$1715",
+          "venta": "$1795"
         }
       }
     },
@@ -266,17 +275,18 @@
         "dolarTarjeta": {
           "venta": "$2052,70"
         },
-        "dolarTurista": {
-          "venta": "$1720,04"
-        },
         "dolarMEP": {
           "venta": "$1575,08"
         },
         "dolarCCL": {
-          "venta": "$1551"
+          "venta": "$1720,04"
         },
         "dolarMayorista": {
-          "venta": "$1715,00$1795"
+          "venta": "$1551"
+        },
+        "euro": {
+          "compra": "$1715",
+          "venta": "$1795"
         }
       }
     },
@@ -294,17 +304,18 @@
         "dolarTarjeta": {
           "venta": "$2052,70"
         },
-        "dolarTurista": {
-          "venta": "$1676,01"
-        },
         "dolarMEP": {
           "venta": "$1572,90"
         },
         "dolarCCL": {
-          "venta": "$1543,50"
+          "venta": "$1676,01"
         },
         "dolarMayorista": {
-          "venta": "$1715,00$1795"
+          "venta": "$1543,50"
+        },
+        "euro": {
+          "compra": "$1715",
+          "venta": "$1795"
         }
       }
     },
@@ -322,17 +333,18 @@
         "dolarTarjeta": {
           "venta": "$2052,70"
         },
-        "dolarTurista": {
-          "venta": "$1676,01"
-        },
         "dolarMEP": {
           "venta": "$1572,90"
         },
         "dolarCCL": {
-          "venta": "$1543,50"
+          "venta": "$1676,01"
         },
         "dolarMayorista": {
-          "venta": "$1715,00$1795"
+          "venta": "$1543,50"
+        },
+        "euro": {
+          "compra": "$1715",
+          "venta": "$1795"
         }
       }
     },
@@ -350,17 +362,18 @@
         "dolarTarjeta": {
           "venta": "$2052,70"
         },
-        "dolarTurista": {
-          "venta": "$1667,63"
-        },
         "dolarMEP": {
           "venta": "$1577,82"
         },
         "dolarCCL": {
-          "venta": "$1544"
+          "venta": "$1667,63"
         },
         "dolarMayorista": {
-          "venta": "$1715,00$1795"
+          "venta": "$1544"
+        },
+        "euro": {
+          "compra": "$1715",
+          "venta": "$1795"
         }
       }
     },
@@ -378,17 +391,18 @@
         "dolarTarjeta": {
           "venta": "$2052,70"
         },
-        "dolarTurista": {
-          "venta": "$1667,63"
-        },
         "dolarMEP": {
           "venta": "$1577,82"
         },
         "dolarCCL": {
-          "venta": "$1544"
+          "venta": "$1667,63"
         },
         "dolarMayorista": {
-          "venta": "$1715,00$1795"
+          "venta": "$1544"
+        },
+        "euro": {
+          "compra": "$1715",
+          "venta": "$1795"
         }
       }
     },
@@ -406,17 +420,18 @@
         "dolarTarjeta": {
           "venta": "$2052,70"
         },
-        "dolarTurista": {
-          "venta": "$1664,36"
-        },
         "dolarMEP": {
           "venta": "$1573,97"
         },
         "dolarCCL": {
-          "venta": "$1544"
+          "venta": "$1664,36"
         },
         "dolarMayorista": {
-          "venta": "$1715,00$1795"
+          "venta": "$1544"
+        },
+        "euro": {
+          "compra": "$1715",
+          "venta": "$1795"
         }
       }
     },
@@ -434,17 +449,18 @@
         "dolarTarjeta": {
           "venta": "$2052,70"
         },
-        "dolarTurista": {
-          "venta": "$1664,36"
-        },
         "dolarMEP": {
           "venta": "$1573,97"
         },
         "dolarCCL": {
-          "venta": "$1544"
+          "venta": "$1664,36"
         },
         "dolarMayorista": {
-          "venta": "$1715,00$1795"
+          "venta": "$1544"
+        },
+        "euro": {
+          "compra": "$1715",
+          "venta": "$1795"
         }
       }
     },
@@ -462,17 +478,18 @@
         "dolarTarjeta": {
           "venta": "$2052,70"
         },
-        "dolarTurista": {
-          "venta": "$1660,28"
-        },
         "dolarMEP": {
           "venta": "$1583,82"
         },
         "dolarCCL": {
-          "venta": "$1545,50"
+          "venta": "$1660,28"
         },
         "dolarMayorista": {
-          "venta": "$1715,00$1795"
+          "venta": "$1545,50"
+        },
+        "euro": {
+          "compra": "$1715",
+          "venta": "$1795"
         }
       }
     },
@@ -490,17 +507,18 @@
         "dolarTarjeta": {
           "venta": "$2052,70"
         },
-        "dolarTurista": {
-          "venta": "$1660,28"
-        },
         "dolarMEP": {
           "venta": "$1583,82"
         },
         "dolarCCL": {
-          "venta": "$1545,50"
+          "venta": "$1660,28"
         },
         "dolarMayorista": {
-          "venta": "$1715,00$1795"
+          "venta": "$1545,50"
+        },
+        "euro": {
+          "compra": "$1715",
+          "venta": "$1795"
         }
       }
     },
@@ -518,17 +536,18 @@
         "dolarTarjeta": {
           "venta": "$2052,70"
         },
-        "dolarTurista": {
-          "venta": "$1647,66"
-        },
         "dolarMEP": {
           "venta": "$1583,82"
         },
         "dolarCCL": {
-          "venta": "$1545,50"
+          "venta": "$1647,66"
         },
         "dolarMayorista": {
-          "venta": "$1715,00$1795"
+          "venta": "$1545,50"
+        },
+        "euro": {
+          "compra": "$1715",
+          "venta": "$1795"
         }
       }
     },
@@ -546,17 +565,18 @@
         "dolarTarjeta": {
           "venta": "$2052,70"
         },
-        "dolarTurista": {
-          "venta": "$1647,66"
-        },
         "dolarMEP": {
           "venta": "$1583,82"
         },
         "dolarCCL": {
-          "venta": "$1545,50"
+          "venta": "$1647,66"
         },
         "dolarMayorista": {
-          "venta": "$1715,00$1795"
+          "venta": "$1545,50"
+        },
+        "euro": {
+          "compra": "$1715",
+          "venta": "$1795"
         }
       }
     },
@@ -574,17 +594,18 @@
         "dolarTarjeta": {
           "venta": "$2052,70"
         },
-        "dolarTurista": {
-          "venta": "$1671,78"
-        },
         "dolarMEP": {
           "venta": "$1577,76"
         },
         "dolarCCL": {
-          "venta": "$1545,50"
+          "venta": "$1671,78"
         },
         "dolarMayorista": {
-          "venta": "$1715,00$1795"
+          "venta": "$1545,50"
+        },
+        "euro": {
+          "compra": "$1715",
+          "venta": "$1795"
         }
       }
     }
