@@ -4,7 +4,7 @@ import {
   type currentDollarQuotesInterface,
   type newDollarQuotesInterface
 } from '../../interfaces'
-import { SAVED_RESULTS } from '../constants/quotes'
+import { FIXTURE_RATES } from '../constants/quotes'
 import { FIRST_QUOTE_DATE } from '../constants/unit'
 
 export function buildQuote(hoursAgo: number): newDollarQuotesInterface {
@@ -12,7 +12,7 @@ export function buildQuote(hoursAgo: number): newDollarQuotesInterface {
     date: dayjs(FIRST_QUOTE_DATE)
       .subtract(hoursAgo, 'hour')
       .format(DATE_FORMAT),
-    results: structuredClone(SAVED_RESULTS)
+    results: structuredClone(FIXTURE_RATES)
   }
 }
 

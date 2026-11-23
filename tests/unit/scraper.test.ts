@@ -1,15 +1,13 @@
-import { readFileSync } from 'node:fs'
-import { join } from 'node:path'
 import { describe, expect, it } from 'vitest'
+import { SOURCE_TITLES } from '../../constants'
 import { parseExchangeRates, removeCents } from '../../utils/scraper'
-import { allRateValues, toRateTable } from '../utils/rates'
-import LANACION_CASES from '../constants/lanacion-cases.json'
+import { FIXTURE_RATES } from '../constants/quotes'
+import { PRICE_PATTERN } from '../constants/schemas'
+import { readLaNacionPage } from '../utils/fixtures'
+import { allRateValues } from '../utils/rates'
 import REMOVE_CENTS_CASES from '../constants/remove-cents-cases.json'
 
-const PRICE_PATTERN = /^\$\d+(,\d{2})?$/u
-
-// La Nacion reordered its rows, and the scraper picks them by position.
-const MISPLACED_CURRENCIES = new Set(['dolarCCL', 'dolarMayorista'])
+const MISSING_TITLE = 'Dólar cripto'
 
 describe('removeCents', () => {
   it.each(REMOVE_CENTS_CASES)(
@@ -21,36 +19,35 @@ describe('removeCents', () => {
 })
 
 describe('parseExchangeRates', () => {
-  const html = readFileSync(
-    join(import.meta.dirname, '../fixtures/lanacion.html'),
-    'utf-8'
-  )
-  const rates = parseExchangeRates(html)
-  const table = toRateTable(rates)
+  const html = readLaNacionPage()
 
-  const placedCases = LANACION_CASES.filter(
-    ({ currency }) => !MISPLACED_CURRENCIES.has(currency)
-  )
-  const misplacedCases = LANACION_CASES.filter(({ currency }) =>
-    MISPLACED_CURRENCIES.has(currency)
-  )
-
-  it.each(placedCases)(
-    'reads $currency $field as $expected',
-    ({ currency, field, expected }) => {
-      expect(table.get(currency)?.get(field)).toBe(expected)
-    }
-  )
-
-  misplacedCases.forEach(({ currency, field, expected }) => {
-    it.fails(`reads ${currency} ${field} as ${expected}`, () => {
-      expect(table.get(currency)?.get(field)).toBe(expected)
-    })
+  it('reads every currency from the row with its title', () => {
+    expect(parseExchangeRates(html)).toEqual(FIXTURE_RATES)
   })
 
-  it.fails('reads a single price for every value', () => {
-    allRateValues(rates).forEach((value) => {
+  it('reads a single price for every value', () => {
+    allRateValues(parseExchangeRates(html)).forEach((value) => {
       expect(value).toMatch(PRICE_PATTERN)
     })
   })
+
+  it('reads the same rates when La Nacion reorders its rows', () => {
+    const reversed = html.replace(
+      /(<ul class="dolar-subgroup[^>]*>)([\s\S]*?)(<\/ul>)/u,
+      (_, start: string, rows: string, end: string) =>
+        `${start}${rows.split('</li>').reverse().join('</li>')}${end}`
+    )
+
+    expect(reversed).not.toBe(html)
+    expect(parseExchangeRates(reversed)).toEqual(FIXTURE_RATES)
+  })
+
+  it.each(Object.values(SOURCE_TITLES))(
+    'fails when the page has no "%s" row',
+    (title) => {
+      const withoutRow = html.replaceAll(`>${title}<`, `>${MISSING_TITLE}<`)
+
+      expect(() => parseExchangeRates(withoutRow)).toThrow(title)
+    }
+  )
 })

@@ -4,18 +4,27 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { HISTORICAL_LIMIT, SOURCE_URL } from '../../constants'
 import { scrapeAndSave } from '../../scraping/scrapeAndSave'
 import { EXCHANGE_RATES_OPTIONS, scraper } from '../../utils/scraper'
-import { SAVED_RESULTS, SCRAPED_RESULTS } from '../constants/quotes'
+import { FIXTURE_RATES } from '../constants/quotes'
 import { SCRAPE_DATE, SCRAPE_DATE_TEXT, SINGLE_CALL } from '../constants/unit'
+import { readLaNacionPage } from '../utils/fixtures'
 import { useTempDbFile } from '../utils/files'
 import { buildDollarQuotes } from '../utils/quotes'
 
-vi.mock('scrape-it', () => ({ default: vi.fn() }))
+vi.mock('scrape-it', async (importOriginal) => {
+  const { default: actual } = await importOriginal<{
+    default: typeof scrapeIt
+  }>()
+
+  return {
+    default: Object.assign(vi.fn(), { scrapeHTML: actual.scrapeHTML })
+  }
+})
 
 const scrapeItMock = vi.mocked(scrapeIt)
 
 function resolveScrape() {
   scrapeItMock.mockResolvedValue({
-    data: structuredClone(SCRAPED_RESULTS)
+    data: scrapeIt.scrapeHTML(readLaNacionPage(), EXCHANGE_RATES_OPTIONS)
   } as unknown as Awaited<ReturnType<typeof scrapeIt>>)
 }
 
@@ -24,10 +33,10 @@ describe('scraper', () => {
     scrapeItMock.mockReset()
   })
 
-  it('scrapes the La Nacion page and removes the empty cents', async () => {
+  it('scrapes the exchange rates from the La Nacion page', async () => {
     resolveScrape()
 
-    expect(await scraper()).toEqual(SAVED_RESULTS)
+    expect(await scraper()).toEqual(FIXTURE_RATES)
     expect(scrapeItMock).toHaveBeenCalledTimes(SINGLE_CALL)
     expect(scrapeItMock).toHaveBeenCalledWith(
       SOURCE_URL,
@@ -58,7 +67,7 @@ describe('scrapeAndSave', () => {
     await scrapeAndSave(file)
 
     expect(JSON.parse(await readFile(file, 'utf-8'))).toEqual({
-      latest: { date: SCRAPE_DATE_TEXT, results: SAVED_RESULTS },
+      latest: { date: SCRAPE_DATE_TEXT, results: FIXTURE_RATES },
       historical: [current.latest, ...current.historical]
     })
   })
@@ -70,7 +79,7 @@ describe('scrapeAndSave', () => {
     await scrapeAndSave(file)
 
     expect(JSON.parse(await readFile(file, 'utf-8'))).toEqual({
-      latest: { date: SCRAPE_DATE_TEXT, results: SAVED_RESULTS },
+      latest: { date: SCRAPE_DATE_TEXT, results: FIXTURE_RATES },
       historical: []
     })
   })

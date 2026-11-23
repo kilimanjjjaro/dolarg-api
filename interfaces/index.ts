@@ -10,9 +10,6 @@ export interface ExchangeRatesInterface {
   dolarTarjeta: {
     venta: string
   }
-  dolarTurista: {
-    venta: string
-  }
   dolarMEP: {
     venta: string
   }
@@ -20,6 +17,10 @@ export interface ExchangeRatesInterface {
     venta: string
   }
   dolarMayorista: {
+    venta: string
+  }
+  euro: {
+    compra: string
     venta: string
   }
 }
