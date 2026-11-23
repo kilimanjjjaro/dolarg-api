@@ -13,8 +13,7 @@ export const SOURCE_TITLES = {
   dolarTarjeta: 'Dólar tarjeta',
   dolarMEP: 'Dólar MEP',
   dolarCCL: 'Dólar CCL',
-  dolarMayorista: 'Dólar mayorista',
-  euro: 'Euro'
+  dolarMayorista: 'Dólar mayorista'
 } as const
 
 export const DATE_FORMAT = 'DD-MM-YYYY HH:mm:ss'

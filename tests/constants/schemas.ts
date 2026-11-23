@@ -25,8 +25,7 @@ export const EXCHANGE_RATES_SCHEMA = z.strictObject({
   dolarTarjeta: SALE,
   dolarMEP: SALE,
   dolarCCL: SALE,
-  dolarMayorista: SALE,
-  euro: PURCHASE_AND_SALE
+  dolarMayorista: SALE
 })
 
 export const DOLLAR_QUOTES_SCHEMA = z.strictObject({

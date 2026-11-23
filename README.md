@@ -1,6 +1,6 @@
 # DolARG API
 
-An API with the most common exchange rates of Argentina, scraped from
+An API with the most common dollar exchange rates of Argentina, scraped from
 [LA NACIÓN](https://www.lanacion.com.ar/dolar-oficial-historico/). The data is
 updated from Monday to Friday at 12:00 and 16:00 (GMT-3).
 
@@ -21,8 +21,7 @@ oldest:
       "dolarTarjeta": { "venta": "$2134,60" },
       "dolarMEP": { "venta": "$1701,05" },
       "dolarCCL": { "venta": "$1736,94" },
-      "dolarMayorista": { "venta": "$1580" },
-      "euro": { "compra": "$1710", "venta": "$1790" }
+      "dolarMayorista": { "venta": "$1580" }
     }
   },
   "historical": []
@@ -32,9 +31,9 @@ oldest:
 Dates use the `DD-MM-YYYY HH:mm:ss` format in GMT-3. The API accepts requests
 from any origin.
 
-`dolarTurista` was removed because LA NACIÓN no longer publishes it, and `euro`
-was added. Every stored quote was corrected, since `dolarCCL` and
-`dolarMayorista` used to be read from the wrong rows.
+`dolarTurista` was removed because LA NACIÓN no longer publishes it. Every
+stored quote was corrected, since `dolarCCL` and `dolarMayorista` used to be
+read from the wrong rows.
 
 ## How it works
 

@@ -19,10 +19,6 @@ export interface ExchangeRatesInterface {
   dolarMayorista: {
     venta: string
   }
-  euro: {
-    compra: string
-    venta: string
-  }
 }
 
 export interface newDollarQuotesInterface {
