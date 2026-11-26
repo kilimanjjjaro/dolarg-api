@@ -1,23 +1,23 @@
 {
   "latest": {
-    "date": "25-11-2026 22:59:39",
+    "date": "26-11-2026 20:29:48",
     "results": {
       "dolarOficial": {
-        "compra": "$1581,10",
-        "venta": "$1630"
+        "compra": "$1576,25",
+        "venta": "$1625"
       },
       "dolarBlue": {
-        "compra": "$1658,70",
-        "venta": "$1710"
+        "compra": "$1649",
+        "venta": "$1700"
       },
       "dolarTarjeta": {
-        "venta": "$2119"
+        "venta": "$2112,50"
       },
       "dolarMEP": {
-        "venta": "$1651,25"
+        "venta": "$1667,85"
       },
       "dolarCCL": {
-        "venta": "$1752,16"
+        "venta": "$1838,51"
       },
       "dolarMayorista": {
         "venta": "$1604"
@@ -25,6 +25,31 @@
     }
   },
   "historical": [
+    {
+      "date": "25-11-2026 22:59:39",
+      "results": {
+        "dolarOficial": {
+          "compra": "$1581,10",
+          "venta": "$1630"
+        },
+        "dolarBlue": {
+          "compra": "$1658,70",
+          "venta": "$1710"
+        },
+        "dolarTarjeta": {
+          "venta": "$2119"
+        },
+        "dolarMEP": {
+          "venta": "$1651,25"
+        },
+        "dolarCCL": {
+          "venta": "$1752,16"
+        },
+        "dolarMayorista": {
+          "venta": "$1604"
+        }
+      }
+    },
     {
       "date": "25-11-2026 20:28:24",
       "results": {
@@ -477,31 +502,6 @@
     },
     {
       "date": "12-11-2026 20:55:45",
-      "results": {
-        "dolarOficial": {
-          "compra": "$1515",
-          "venta": "$1579"
-        },
-        "dolarBlue": {
-          "compra": "$1518,05",
-          "venta": "$1565"
-        },
-        "dolarTarjeta": {
-          "venta": "$2052,70"
-        },
-        "dolarMEP": {
-          "venta": "$1577,82"
-        },
-        "dolarCCL": {
-          "venta": "$1667,63"
-        },
-        "dolarMayorista": {
-          "venta": "$1544"
-        }
-      }
-    },
-    {
-      "date": "12-11-2026 18:44:49",
       "results": {
         "dolarOficial": {
           "compra": "$1515",
